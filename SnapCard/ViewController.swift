@@ -26,18 +26,20 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         view.addSubview(imageView)
         imageView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        let image = imageView.image
+        var image = imageView.image?.resized(withPercentage: 0.1)
+        imageView.image = image
         let imageSize = image?.size
         let pixelWidth = Int((imageSize?.width)!)
         let pixelHeight = Int((imageSize?.height)!)
+        
+        
         
         rgbValues = image?.getRGBValues()
         quantize(rgbValues: rgbValues, depth: 0, maxDepth: 1)
         print("gang")
         
-        let oldImage = imageView.image
         
-        imageView.image = processPixelsInImage(oldImage!)
+        imageView.image = processPixelsInImage(image!)
         
     }
     
@@ -122,6 +124,7 @@ class ViewController: UIViewController {
         
         return nil
     }
+    
     
     
     func processPixelsInImage(_ image: UIImage) -> UIImage? {
@@ -302,8 +305,14 @@ extension UIImage {
         return rgbValues
     }
     
-    
-
-
+    func resized(withPercentage percentage: CGFloat) -> UIImage? {
+        let canvasSize = CGSize(width: self.size.width * percentage, height: self.size.height * percentage)
+        UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
+        defer {
+            UIGraphicsEndImageContext()
+        }
+        self.draw(in: CGRect(origin: .zero, size: canvasSize))
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
 }
 
