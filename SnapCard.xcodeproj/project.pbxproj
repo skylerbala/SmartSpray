@@ -434,6 +434,10 @@
 				DEVELOPMENT_TEAM = BX4CBW4TS6;
 				INFOPLIST_FILE = SnapCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SnapCard/iOSMagick-6.8.8-9",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SkylerBala.SnapCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -449,6 +453,10 @@
 				DEVELOPMENT_TEAM = BX4CBW4TS6;
 				INFOPLIST_FILE = SnapCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SnapCard/iOSMagick-6.8.8-9",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SkylerBala.SnapCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
