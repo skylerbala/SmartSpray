@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "mach_msg_trap:(null)">
+         <PersistentStrings>
+            <PersistentString
+               value = "rgbValues">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.colorDiff(c1:c2:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(c1[&quot;r&quot;]! - c2[&quot;r&quot;]!)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ViewController.findBiggestRange(rgbValues:):ViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.quantize(rgbValues:depth:):ViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.processPixelsInImage(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "pixelBuffer[0]">
+            </PersistentString>
+            <PersistentString
+               value = "RGBA32(red: 255, green: 0,   blue: 0,   alpha: 255)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.quantize(rgbValues:depth:maxDepth:):ViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.viewDidLoad():ViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
