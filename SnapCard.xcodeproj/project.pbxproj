@@ -15,6 +15,8 @@
 		9F13D235213E5A7000F44527 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F13D233213E5A7000F44527 /* LaunchScreen.storyboard */; };
 		9F13D240213E5A7000F44527 /* SnapCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D23F213E5A7000F44527 /* SnapCardTests.swift */; };
 		9F13D24B213E5A7000F44527 /* SnapCardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D24A213E5A7000F44527 /* SnapCardUITests.swift */; };
+		9F13D2FB214069FF00F44527 /* DominantImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D2FA214069FF00F44527 /* DominantImageColors.swift */; };
+		9F13D2FD21409B1100F44527 /* ImageColorQuantization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D2FC21409B1100F44527 /* ImageColorQuantization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		9F13D246213E5A7000F44527 /* SnapCardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapCardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F13D24A213E5A7000F44527 /* SnapCardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCardUITests.swift; sourceTree = "<group>"; };
 		9F13D24C213E5A7000F44527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F13D2FA214069FF00F44527 /* DominantImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominantImageColors.swift; sourceTree = "<group>"; };
+		9F13D2FC21409B1100F44527 /* ImageColorQuantization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageColorQuantization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			children = (
 				9F13D227213E5A7000F44527 /* AppDelegate.swift */,
 				9F13D229213E5A7000F44527 /* ViewController.swift */,
+				9F13D2FA214069FF00F44527 /* DominantImageColors.swift */,
+				9F13D2FC21409B1100F44527 /* ImageColorQuantization.swift */,
 				9F13D22B213E5A7000F44527 /* Main.storyboard */,
 				9F13D231213E5A7000F44527 /* Assets.xcassets */,
 				9F13D233213E5A7000F44527 /* LaunchScreen.storyboard */,
@@ -264,7 +270,9 @@
 			files = (
 				9F13D22A213E5A7000F44527 /* ViewController.swift in Sources */,
 				9F13D230213E5A7000F44527 /* SnapCard.xcdatamodeld in Sources */,
+				9F13D2FD21409B1100F44527 /* ImageColorQuantization.swift in Sources */,
 				9F13D228213E5A7000F44527 /* AppDelegate.swift in Sources */,
+				9F13D2FB214069FF00F44527 /* DominantImageColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
