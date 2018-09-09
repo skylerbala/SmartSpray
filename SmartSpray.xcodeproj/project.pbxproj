@@ -7,16 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EFEE48C138D123A3E210696 /* Pods_SmartSprayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353CEF4A801FD2665F14D238 /* Pods_SmartSprayUITests.framework */; };
+		59693E7DFD22D8F123EAA2B3 /* Pods_SmartSpray.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46906328C7D1A082AEF8C91F /* Pods_SmartSpray.framework */; };
+		8497A3EB18987C22EC56CDC7 /* Pods_SmartSprayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03F89954BB909D1D0A29462 /* Pods_SmartSprayTests.framework */; };
 		9F13D228213E5A7000F44527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D227213E5A7000F44527 /* AppDelegate.swift */; };
-		9F13D22A213E5A7000F44527 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D229213E5A7000F44527 /* ViewController.swift */; };
+		9F13D22A213E5A7000F44527 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D229213E5A7000F44527 /* CaptureViewController.swift */; };
 		9F13D22D213E5A7000F44527 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F13D22B213E5A7000F44527 /* Main.storyboard */; };
 		9F13D230213E5A7000F44527 /* ImageColorQuantization.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D22E213E5A7000F44527 /* ImageColorQuantization.xcdatamodeld */; };
 		9F13D232213E5A7000F44527 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F13D231213E5A7000F44527 /* Assets.xcassets */; };
 		9F13D235213E5A7000F44527 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F13D233213E5A7000F44527 /* LaunchScreen.storyboard */; };
-		9F13D240213E5A7000F44527 /* ImageColorQuantizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D23F213E5A7000F44527 /* ImageColorQuantizationTests.swift */; };
-		9F13D24B213E5A7000F44527 /* ImageColorQuantizationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D24A213E5A7000F44527 /* ImageColorQuantizationUITests.swift */; };
+		9F13D240213E5A7000F44527 /* SmartSprayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D23F213E5A7000F44527 /* SmartSprayTests.swift */; };
+		9F13D24B213E5A7000F44527 /* SmartSprayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D24A213E5A7000F44527 /* SmartSprayUITests.swift */; };
 		9F13D2FB214069FF00F44527 /* DominantImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D2FA214069FF00F44527 /* DominantImageColors.swift */; };
 		9F13D2FD21409B1100F44527 /* ImageColorQuantization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D2FC21409B1100F44527 /* ImageColorQuantization.swift */; };
+		9F5A06D82145101600ED418D /* CropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06D72145101600ED418D /* CropView.swift */; };
+		9F5A06DC2145240500ED418D /* ProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06DB2145240500ED418D /* ProcessView.swift */; };
+		9F5A06DE21452CD700ED418D /* QuantizedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06DD21452CD700ED418D /* QuantizedImage.swift */; };
+		9F5A06E021452CFF00ED418D /* RGBA32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06DF21452CFF00ED418D /* RGBA32.swift */; };
+		9FBF07782144EFDC004AC908 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF07772144EFDC004AC908 /* ProcessViewController.swift */; };
+		9FBF07922144F5F3004AC908 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF07912144F5F3004AC908 /* CaptureView.swift */; };
+		9FBF0794214500C6004AC908 /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF0793214500C6004AC908 /* CropViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,22 +47,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9F13D224213E5A7000F44527 /* ImageColorQuantization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageColorQuantization.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21DC390164A984DC5D30368C /* Pods-SmartSprayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartSprayUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartSprayUITests/Pods-SmartSprayUITests.release.xcconfig"; sourceTree = "<group>"; };
+		22FEE041F1CFEA08321703C0 /* Pods-SmartSprayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartSprayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartSprayTests/Pods-SmartSprayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2EC1F8647229285E419D71B0 /* Pods-SmartSprayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartSprayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartSprayTests/Pods-SmartSprayTests.release.xcconfig"; sourceTree = "<group>"; };
+		353CEF4A801FD2665F14D238 /* Pods_SmartSprayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartSprayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46906328C7D1A082AEF8C91F /* Pods_SmartSpray.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartSpray.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		787C23066519ADF7604F7062 /* Pods-SmartSpray.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartSpray.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartSpray/Pods-SmartSpray.release.xcconfig"; sourceTree = "<group>"; };
+		9F13D224213E5A7000F44527 /* SmartSpray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartSpray.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F13D227213E5A7000F44527 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F13D229213E5A7000F44527 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F13D229213E5A7000F44527 /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		9F13D22C213E5A7000F44527 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F13D22F213E5A7000F44527 /* SnapCard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SnapCard.xcdatamodel; sourceTree = "<group>"; };
 		9F13D231213E5A7000F44527 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F13D234213E5A7000F44527 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F13D236213E5A7000F44527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F13D23B213E5A7000F44527 /* ImageColorQuantizationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageColorQuantizationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F13D23F213E5A7000F44527 /* ImageColorQuantizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageColorQuantizationTests.swift; sourceTree = "<group>"; };
+		9F13D23B213E5A7000F44527 /* SmartSprayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartSprayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F13D23F213E5A7000F44527 /* SmartSprayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSprayTests.swift; sourceTree = "<group>"; };
 		9F13D241213E5A7000F44527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F13D246213E5A7000F44527 /* ImageColorQuantizationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageColorQuantizationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F13D24A213E5A7000F44527 /* ImageColorQuantizationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageColorQuantizationUITests.swift; sourceTree = "<group>"; };
+		9F13D246213E5A7000F44527 /* SmartSprayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartSprayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F13D24A213E5A7000F44527 /* SmartSprayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSprayUITests.swift; sourceTree = "<group>"; };
 		9F13D24C213E5A7000F44527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F13D2FA214069FF00F44527 /* DominantImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominantImageColors.swift; sourceTree = "<group>"; };
 		9F13D2FC21409B1100F44527 /* ImageColorQuantization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageColorQuantization.swift; sourceTree = "<group>"; };
+		9F5A06D72145101600ED418D /* CropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropView.swift; sourceTree = "<group>"; };
+		9F5A06DB2145240500ED418D /* ProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessView.swift; sourceTree = "<group>"; };
+		9F5A06DD21452CD700ED418D /* QuantizedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantizedImage.swift; sourceTree = "<group>"; };
+		9F5A06DF21452CFF00ED418D /* RGBA32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBA32.swift; sourceTree = "<group>"; };
+		9FBF07772144EFDC004AC908 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
+		9FBF07912144F5F3004AC908 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
+		9FBF0793214500C6004AC908 /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
+		A03F89954BB909D1D0A29462 /* Pods_SmartSprayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartSprayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDA190A4CC7C83904B0FED9A /* Pods-SmartSpray.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartSpray.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartSpray/Pods-SmartSpray.debug.xcconfig"; sourceTree = "<group>"; };
+		EC9917E639705C9192D7DF61 /* Pods-SmartSprayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartSprayUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartSprayUITests/Pods-SmartSprayUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59693E7DFD22D8F123EAA2B3 /* Pods_SmartSpray.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8497A3EB18987C22EC56CDC7 /* Pods_SmartSprayTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,92 +102,208 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EFEE48C138D123A3E210696 /* Pods_SmartSprayUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56AB8D8D1E6A26A5939A9046 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46906328C7D1A082AEF8C91F /* Pods_SmartSpray.framework */,
+				A03F89954BB909D1D0A29462 /* Pods_SmartSprayTests.framework */,
+				353CEF4A801FD2665F14D238 /* Pods_SmartSprayUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F13D21B213E5A7000F44527 = {
 			isa = PBXGroup;
 			children = (
-				9F13D226213E5A7000F44527 /* ImageColorQuantization */,
-				9F13D23E213E5A7000F44527 /* ImageColorQuantizationTests */,
-				9F13D249213E5A7000F44527 /* ImageColorQuantizationUITests */,
+				9F13D226213E5A7000F44527 /* SmartSpray */,
+				9F13D23E213E5A7000F44527 /* SmartSprayTests */,
+				9F13D249213E5A7000F44527 /* SmartSprayUITests */,
 				9F13D225213E5A7000F44527 /* Products */,
+				EFA753EF031062CDE3EB2691 /* Pods */,
+				56AB8D8D1E6A26A5939A9046 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		9F13D225213E5A7000F44527 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9F13D224213E5A7000F44527 /* ImageColorQuantization.app */,
-				9F13D23B213E5A7000F44527 /* ImageColorQuantizationTests.xctest */,
-				9F13D246213E5A7000F44527 /* ImageColorQuantizationUITests.xctest */,
+				9F13D224213E5A7000F44527 /* SmartSpray.app */,
+				9F13D23B213E5A7000F44527 /* SmartSprayTests.xctest */,
+				9F13D246213E5A7000F44527 /* SmartSprayUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9F13D226213E5A7000F44527 /* ImageColorQuantization */ = {
+		9F13D226213E5A7000F44527 /* SmartSpray */ = {
 			isa = PBXGroup;
 			children = (
-				9F13D227213E5A7000F44527 /* AppDelegate.swift */,
-				9F13D229213E5A7000F44527 /* ViewController.swift */,
-				9F13D2FA214069FF00F44527 /* DominantImageColors.swift */,
-				9F13D2FC21409B1100F44527 /* ImageColorQuantization.swift */,
+				9FBF076F2144EE6E004AC908 /* Assets */,
+				9FBF076E2144EE68004AC908 /* Application */,
+				9FBF076D2144EE5D004AC908 /* Models */,
 				9F13D22B213E5A7000F44527 /* Main.storyboard */,
 				9F13D231213E5A7000F44527 /* Assets.xcassets */,
 				9F13D233213E5A7000F44527 /* LaunchScreen.storyboard */,
 				9F13D236213E5A7000F44527 /* Info.plist */,
 				9F13D22E213E5A7000F44527 /* ImageColorQuantization.xcdatamodeld */,
 			);
-			path = ImageColorQuantization;
+			path = SmartSpray;
 			sourceTree = "<group>";
 		};
-		9F13D23E213E5A7000F44527 /* ImageColorQuantizationTests */ = {
+		9F13D23E213E5A7000F44527 /* SmartSprayTests */ = {
 			isa = PBXGroup;
 			children = (
-				9F13D23F213E5A7000F44527 /* ImageColorQuantizationTests.swift */,
+				9F13D23F213E5A7000F44527 /* SmartSprayTests.swift */,
 				9F13D241213E5A7000F44527 /* Info.plist */,
 			);
-			name = ImageColorQuantizationTests;
+			name = SmartSprayTests;
 			path = SnapCardTests;
 			sourceTree = "<group>";
 		};
-		9F13D249213E5A7000F44527 /* ImageColorQuantizationUITests */ = {
+		9F13D249213E5A7000F44527 /* SmartSprayUITests */ = {
 			isa = PBXGroup;
 			children = (
-				9F13D24A213E5A7000F44527 /* ImageColorQuantizationUITests.swift */,
+				9F13D24A213E5A7000F44527 /* SmartSprayUITests.swift */,
 				9F13D24C213E5A7000F44527 /* Info.plist */,
 			);
-			name = ImageColorQuantizationUITests;
+			name = SmartSprayUITests;
 			path = SnapCardUITests;
+			sourceTree = "<group>";
+		};
+		9F5A06D9214522A500ED418D /* Crop */ = {
+			isa = PBXGroup;
+			children = (
+				9FBF0793214500C6004AC908 /* CropViewController.swift */,
+				9F5A06D72145101600ED418D /* CropView.swift */,
+			);
+			path = Crop;
+			sourceTree = "<group>";
+		};
+		9F5A06DA214522AA00ED418D /* Process */ = {
+			isa = PBXGroup;
+			children = (
+				9FBF07772144EFDC004AC908 /* ProcessViewController.swift */,
+				9F5A06DB2145240500ED418D /* ProcessView.swift */,
+			);
+			path = Process;
+			sourceTree = "<group>";
+		};
+		9FBF076D2144EE5D004AC908 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F5A06DD21452CD700ED418D /* QuantizedImage.swift */,
+				9F5A06DF21452CFF00ED418D /* RGBA32.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9FBF076E2144EE68004AC908 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9FBF07762144EF26004AC908 /* Extensions */,
+				9FBF07752144EF21004AC908 /* Common */,
+				9FBF07742144EEEB004AC908 /* Main */,
+				9FBF07732144EE9C004AC908 /* Predict */,
+				9FBF07722144EE97004AC908 /* Capture */,
+				9F5A06DA214522AA00ED418D /* Process */,
+				9F5A06D9214522A500ED418D /* Crop */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9FBF076F2144EE6E004AC908 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		9FBF07722144EE97004AC908 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				9F13D229213E5A7000F44527 /* CaptureViewController.swift */,
+				9FBF07912144F5F3004AC908 /* CaptureView.swift */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		9FBF07732144EE9C004AC908 /* Predict */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Predict;
+			sourceTree = "<group>";
+		};
+		9FBF07742144EEEB004AC908 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9F13D227213E5A7000F44527 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9FBF07752144EF21004AC908 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9FBF07762144EF26004AC908 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F13D2FC21409B1100F44527 /* ImageColorQuantization.swift */,
+				9F13D2FA214069FF00F44527 /* DominantImageColors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EFA753EF031062CDE3EB2691 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDA190A4CC7C83904B0FED9A /* Pods-SmartSpray.debug.xcconfig */,
+				787C23066519ADF7604F7062 /* Pods-SmartSpray.release.xcconfig */,
+				22FEE041F1CFEA08321703C0 /* Pods-SmartSprayTests.debug.xcconfig */,
+				2EC1F8647229285E419D71B0 /* Pods-SmartSprayTests.release.xcconfig */,
+				EC9917E639705C9192D7DF61 /* Pods-SmartSprayUITests.debug.xcconfig */,
+				21DC390164A984DC5D30368C /* Pods-SmartSprayUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9F13D223213E5A7000F44527 /* ImageColorQuantization */ = {
+		9F13D223213E5A7000F44527 /* SmartSpray */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F13D24F213E5A7000F44527 /* Build configuration list for PBXNativeTarget "ImageColorQuantization" */;
+			buildConfigurationList = 9F13D24F213E5A7000F44527 /* Build configuration list for PBXNativeTarget "SmartSpray" */;
 			buildPhases = (
+				7A0D926785FE0F34728FD47D /* [CP] Check Pods Manifest.lock */,
 				9F13D220213E5A7000F44527 /* Sources */,
 				9F13D221213E5A7000F44527 /* Frameworks */,
 				9F13D222213E5A7000F44527 /* Resources */,
+				F28F7F9D5B44E16FC3B18A3C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ImageColorQuantization;
+			name = SmartSpray;
 			productName = SnapCard;
-			productReference = 9F13D224213E5A7000F44527 /* ImageColorQuantization.app */;
+			productReference = 9F13D224213E5A7000F44527 /* SmartSpray.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9F13D23A213E5A7000F44527 /* ImageColorQuantizationTests */ = {
+		9F13D23A213E5A7000F44527 /* SmartSprayTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F13D252213E5A7000F44527 /* Build configuration list for PBXNativeTarget "ImageColorQuantizationTests" */;
+			buildConfigurationList = 9F13D252213E5A7000F44527 /* Build configuration list for PBXNativeTarget "SmartSprayTests" */;
 			buildPhases = (
+				728082F2191D57CC7783A0B5 /* [CP] Check Pods Manifest.lock */,
 				9F13D237213E5A7000F44527 /* Sources */,
 				9F13D238213E5A7000F44527 /* Frameworks */,
 				9F13D239213E5A7000F44527 /* Resources */,
@@ -169,15 +313,16 @@
 			dependencies = (
 				9F13D23D213E5A7000F44527 /* PBXTargetDependency */,
 			);
-			name = ImageColorQuantizationTests;
+			name = SmartSprayTests;
 			productName = SnapCardTests;
-			productReference = 9F13D23B213E5A7000F44527 /* ImageColorQuantizationTests.xctest */;
+			productReference = 9F13D23B213E5A7000F44527 /* SmartSprayTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9F13D245213E5A7000F44527 /* ImageColorQuantizationUITests */ = {
+		9F13D245213E5A7000F44527 /* SmartSprayUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F13D255213E5A7000F44527 /* Build configuration list for PBXNativeTarget "ImageColorQuantizationUITests" */;
+			buildConfigurationList = 9F13D255213E5A7000F44527 /* Build configuration list for PBXNativeTarget "SmartSprayUITests" */;
 			buildPhases = (
+				3EB53CAB9555405CD806D1DF /* [CP] Check Pods Manifest.lock */,
 				9F13D242213E5A7000F44527 /* Sources */,
 				9F13D243213E5A7000F44527 /* Frameworks */,
 				9F13D244213E5A7000F44527 /* Resources */,
@@ -187,9 +332,9 @@
 			dependencies = (
 				9F13D248213E5A7000F44527 /* PBXTargetDependency */,
 			);
-			name = ImageColorQuantizationUITests;
+			name = SmartSprayUITests;
 			productName = SnapCardUITests;
-			productReference = 9F13D246213E5A7000F44527 /* ImageColorQuantizationUITests.xctest */;
+			productReference = 9F13D246213E5A7000F44527 /* SmartSprayUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -218,7 +363,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9F13D21F213E5A7000F44527 /* Build configuration list for PBXProject "ImageColorQuantization" */;
+			buildConfigurationList = 9F13D21F213E5A7000F44527 /* Build configuration list for PBXProject "SmartSpray" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -231,9 +376,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9F13D223213E5A7000F44527 /* ImageColorQuantization */,
-				9F13D23A213E5A7000F44527 /* ImageColorQuantizationTests */,
-				9F13D245213E5A7000F44527 /* ImageColorQuantizationUITests */,
+				9F13D223213E5A7000F44527 /* SmartSpray */,
+				9F13D23A213E5A7000F44527 /* SmartSprayTests */,
+				9F13D245213E5A7000F44527 /* SmartSprayUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -265,15 +410,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3EB53CAB9555405CD806D1DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartSprayUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		728082F2191D57CC7783A0B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartSprayTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A0D926785FE0F34728FD47D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartSpray-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F28F7F9D5B44E16FC3B18A3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmartSpray/Pods-SmartSpray-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EZLoadingActivity/EZLoadingActivity.framework",
+				"${BUILT_PRODUCTS_DIR}/IGRPhotoTweaks/IGRPhotoTweaks.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZLoadingActivity.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGRPhotoTweaks.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartSpray/Pods-SmartSpray-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F13D220213E5A7000F44527 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F13D22A213E5A7000F44527 /* ViewController.swift in Sources */,
+				9F13D22A213E5A7000F44527 /* CaptureViewController.swift in Sources */,
 				9F13D230213E5A7000F44527 /* ImageColorQuantization.xcdatamodeld in Sources */,
+				9FBF07922144F5F3004AC908 /* CaptureView.swift in Sources */,
+				9F5A06DE21452CD700ED418D /* QuantizedImage.swift in Sources */,
+				9FBF07782144EFDC004AC908 /* ProcessViewController.swift in Sources */,
+				9F5A06DC2145240500ED418D /* ProcessView.swift in Sources */,
 				9F13D2FD21409B1100F44527 /* ImageColorQuantization.swift in Sources */,
+				9F5A06D82145101600ED418D /* CropView.swift in Sources */,
+				9F5A06E021452CFF00ED418D /* RGBA32.swift in Sources */,
 				9F13D228213E5A7000F44527 /* AppDelegate.swift in Sources */,
+				9FBF0794214500C6004AC908 /* CropViewController.swift in Sources */,
 				9F13D2FB214069FF00F44527 /* DominantImageColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F13D240213E5A7000F44527 /* ImageColorQuantizationTests.swift in Sources */,
+				9F13D240213E5A7000F44527 /* SmartSprayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F13D24B213E5A7000F44527 /* ImageColorQuantizationUITests.swift in Sources */,
+				9F13D24B213E5A7000F44527 /* SmartSprayUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,12 +528,12 @@
 /* Begin PBXTargetDependency section */
 		9F13D23D213E5A7000F44527 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9F13D223213E5A7000F44527 /* ImageColorQuantization */;
+			target = 9F13D223213E5A7000F44527 /* SmartSpray */;
 			targetProxy = 9F13D23C213E5A7000F44527 /* PBXContainerItemProxy */;
 		};
 		9F13D248213E5A7000F44527 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9F13D223213E5A7000F44527 /* ImageColorQuantization */;
+			target = 9F13D223213E5A7000F44527 /* SmartSpray */;
 			targetProxy = 9F13D247213E5A7000F44527 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -438,17 +667,18 @@
 		};
 		9F13D250213E5A7000F44527 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDA190A4CC7C83904B0FED9A /* Pods-SmartSpray.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BX4CBW4TS6;
-				INFOPLIST_FILE = ImageColorQuantization/Info.plist;
+				INFOPLIST_FILE = SmartSpray/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SnapCard/iOSMagick-6.8.8-9",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SkylerBala.ImageColorQuantization;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SkylerBala.Money-Reader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -457,17 +687,18 @@
 		};
 		9F13D251213E5A7000F44527 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 787C23066519ADF7604F7062 /* Pods-SmartSpray.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BX4CBW4TS6;
-				INFOPLIST_FILE = ImageColorQuantization/Info.plist;
+				INFOPLIST_FILE = SmartSpray/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SnapCard/iOSMagick-6.8.8-9",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SkylerBala.ImageColorQuantization;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SkylerBala.Money-Reader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -476,14 +707,15 @@
 		};
 		9F13D253213E5A7000F44527 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22FEE041F1CFEA08321703C0 /* Pods-SmartSprayTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BX4CBW4TS6;
-				INFOPLIST_FILE = ImageColorQuantizationTests/Info.plist;
+				INFOPLIST_FILE = SmartSpray/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SkylerBala.ImageColorQuantization;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SkylerBala.SmartSpray;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -493,14 +725,15 @@
 		};
 		9F13D254213E5A7000F44527 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EC1F8647229285E419D71B0 /* Pods-SmartSprayTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BX4CBW4TS6;
-				INFOPLIST_FILE = ImageColorQuantizationTests/Info.plist;
+				INFOPLIST_FILE = SmartSpray/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SkylerBala.ImageColorQuantization;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SkylerBala.SmartSpray;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -510,6 +743,7 @@
 		};
 		9F13D256213E5A7000F44527 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC9917E639705C9192D7DF61 /* Pods-SmartSprayUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +760,7 @@
 		};
 		9F13D257213E5A7000F44527 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21DC390164A984DC5D30368C /* Pods-SmartSprayUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,7 +778,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9F13D21F213E5A7000F44527 /* Build configuration list for PBXProject "ImageColorQuantization" */ = {
+		9F13D21F213E5A7000F44527 /* Build configuration list for PBXProject "SmartSpray" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F13D24D213E5A7000F44527 /* Debug */,
@@ -552,7 +787,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F13D24F213E5A7000F44527 /* Build configuration list for PBXNativeTarget "ImageColorQuantization" */ = {
+		9F13D24F213E5A7000F44527 /* Build configuration list for PBXNativeTarget "SmartSpray" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F13D250213E5A7000F44527 /* Debug */,
@@ -561,7 +796,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F13D252213E5A7000F44527 /* Build configuration list for PBXNativeTarget "ImageColorQuantizationTests" */ = {
+		9F13D252213E5A7000F44527 /* Build configuration list for PBXNativeTarget "SmartSprayTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F13D253213E5A7000F44527 /* Debug */,
@@ -570,7 +805,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F13D255213E5A7000F44527 /* Build configuration list for PBXNativeTarget "ImageColorQuantizationUITests" */ = {
+		9F13D255213E5A7000F44527 /* Build configuration list for PBXNativeTarget "SmartSprayUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F13D256213E5A7000F44527 /* Debug */,

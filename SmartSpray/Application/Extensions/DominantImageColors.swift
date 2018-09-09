@@ -51,27 +51,28 @@ enum ColorRange: String {
 
 
 enum UIImageQuality: CGFloat {
-    case lowest = 0.01
-    case low = 0.1
-    case medium = 0.25
-    case high = 0.5
+    case lowest = 0.1
+    case lower = 0.25
+    case medium = 0.5
+    case higher = 0.75
     case highest = 1.0
 }
 
 extension UIImage {
-    func getDominantColors(numberOfColors: Int = 2, quality: UIImageQuality = .high) -> [Color] {
-        let imageSize = CGSize(width: self.size.width * quality.rawValue , height: self.size.height * quality.rawValue)
-        let resizedImage = resize(newSize: imageSize)
+    func getDominantColors(numberOfColors: Int = 2, quality: UIImageQuality = .highest) -> ([Color], UIImage) {
+        let resizedImage = resize(quality: quality)
         
         var colors = resizedImage.getColors()
         var dominantColors = [Color]()
         
         quantizeImageColors(dominantColors: &dominantColors, colors: &colors, depth: 0, maxDepth: numberOfColors - 1)
         
-        return dominantColors
+        return (dominantColors, resizedImage)
     }
     
-    func resize(newSize: CGSize) -> UIImage {
+    func resize(quality: UIImageQuality) -> UIImage {
+        let newSize = CGSize(width: self.size.width * quality.rawValue , height: self.size.height * quality.rawValue)
+
         UIGraphicsBeginImageContextWithOptions(newSize, false, scale)
         defer {
             UIGraphicsEndImageContext()

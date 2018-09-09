@@ -19,6 +19,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "CaptureViewController.setupDevice():CaptureViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "devices.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in ViewController.findBiggestRange(rgbValues:):ViewController.swift">
       </ContextState>
       <ContextState
