@@ -20,9 +20,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
+        let tabBarVC = UITabBarController()
+        
+        let predictionsListVC = PredictionsListViewController()
+        predictionsListVC.title = "Predictions"
         
         let captureVC = CaptureViewController()
-        window?.rootViewController = UINavigationController(rootViewController: captureVC)
+        captureVC.title = "Capture"
+        
+        
+        let predictVC = PredictCoverageViewController()
+        predictVC.title = "Predict Coverage"
+        
+        let vcs = [captureVC, predictVC, predictionsListVC]
+        
+        tabBarVC.viewControllers = vcs.map({ (vc) -> UIViewController in
+            return UINavigationController(rootViewController: vc)
+        })
+        
+        
+        
+        window?.rootViewController = tabBarVC
+
         
         window?.makeKeyAndVisible()
         

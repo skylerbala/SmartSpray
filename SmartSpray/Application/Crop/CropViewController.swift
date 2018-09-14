@@ -8,6 +8,7 @@
 
 import UIKit
 import IGRPhotoTweaks
+import EZLoadingActivity
 
 class CropViewController: IGRPhotoTweakViewController {
     

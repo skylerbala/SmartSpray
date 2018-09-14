@@ -24,9 +24,15 @@
 		9F5A06DC2145240500ED418D /* ProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06DB2145240500ED418D /* ProcessView.swift */; };
 		9F5A06DE21452CD700ED418D /* QuantizedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06DD21452CD700ED418D /* QuantizedImage.swift */; };
 		9F5A06E021452CFF00ED418D /* RGBA32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06DF21452CFF00ED418D /* RGBA32.swift */; };
+		9F5A06E22145BEF800ED418D /* SaveFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06E12145BEF800ED418D /* SaveFormViewController.swift */; };
 		9FBF07782144EFDC004AC908 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF07772144EFDC004AC908 /* ProcessViewController.swift */; };
 		9FBF07922144F5F3004AC908 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF07912144F5F3004AC908 /* CaptureView.swift */; };
 		9FBF0794214500C6004AC908 /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF0793214500C6004AC908 /* CropViewController.swift */; };
+		9FEE08B5214A27F3001EA6EA /* PredictCoverageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE08B4214A27F3001EA6EA /* PredictCoverageViewController.swift */; };
+		9FEE08B7214A3886001EA6EA /* PredictCoverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE08B6214A3886001EA6EA /* PredictCoverageView.swift */; };
+		9FEE08B9214A4557001EA6EA /* PredictIntCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE08B8214A4557001EA6EA /* PredictIntCell.swift */; };
+		9FEE08BC214A6D26001EA6EA /* PredictionsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE08BB214A6D26001EA6EA /* PredictionsListTableViewController.swift */; };
+		9FEE0920214B3756001EA6EA /* MainColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE091F214B3756001EA6EA /* MainColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,9 +79,15 @@
 		9F5A06DB2145240500ED418D /* ProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessView.swift; sourceTree = "<group>"; };
 		9F5A06DD21452CD700ED418D /* QuantizedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantizedImage.swift; sourceTree = "<group>"; };
 		9F5A06DF21452CFF00ED418D /* RGBA32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBA32.swift; sourceTree = "<group>"; };
+		9F5A06E12145BEF800ED418D /* SaveFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFormViewController.swift; sourceTree = "<group>"; };
 		9FBF07772144EFDC004AC908 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
 		9FBF07912144F5F3004AC908 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
 		9FBF0793214500C6004AC908 /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
+		9FEE08B4214A27F3001EA6EA /* PredictCoverageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictCoverageViewController.swift; sourceTree = "<group>"; };
+		9FEE08B6214A3886001EA6EA /* PredictCoverageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictCoverageView.swift; sourceTree = "<group>"; };
+		9FEE08B8214A4557001EA6EA /* PredictIntCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictIntCell.swift; sourceTree = "<group>"; };
+		9FEE08BB214A6D26001EA6EA /* PredictionsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionsListTableViewController.swift; sourceTree = "<group>"; };
+		9FEE091F214B3756001EA6EA /* MainColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainColors.swift; sourceTree = "<group>"; };
 		A03F89954BB909D1D0A29462 /* Pods_SmartSprayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartSprayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA190A4CC7C83904B0FED9A /* Pods-SmartSpray.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartSpray.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartSpray/Pods-SmartSpray.debug.xcconfig"; sourceTree = "<group>"; };
 		EC9917E639705C9192D7DF61 /* Pods-SmartSprayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartSprayUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartSprayUITests/Pods-SmartSprayUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,7 +160,6 @@
 				9FBF076E2144EE68004AC908 /* Application */,
 				9FBF076D2144EE5D004AC908 /* Models */,
 				9F13D22B213E5A7000F44527 /* Main.storyboard */,
-				9F13D231213E5A7000F44527 /* Assets.xcassets */,
 				9F13D233213E5A7000F44527 /* LaunchScreen.storyboard */,
 				9F13D236213E5A7000F44527 /* Info.plist */,
 				9F13D22E213E5A7000F44527 /* ImageColorQuantization.xcdatamodeld */,
@@ -190,6 +201,7 @@
 			children = (
 				9FBF07772144EFDC004AC908 /* ProcessViewController.swift */,
 				9F5A06DB2145240500ED418D /* ProcessView.swift */,
+				9F5A06E12145BEF800ED418D /* SaveFormViewController.swift */,
 			);
 			path = Process;
 			sourceTree = "<group>";
@@ -206,6 +218,7 @@
 		9FBF076E2144EE68004AC908 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				9FEE08BA214A6CFA001EA6EA /* PredictionsList */,
 				9FBF07762144EF26004AC908 /* Extensions */,
 				9FBF07752144EF21004AC908 /* Common */,
 				9FBF07742144EEEB004AC908 /* Main */,
@@ -220,6 +233,7 @@
 		9FBF076F2144EE6E004AC908 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				9F13D231213E5A7000F44527 /* Assets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -236,6 +250,9 @@
 		9FBF07732144EE9C004AC908 /* Predict */ = {
 			isa = PBXGroup;
 			children = (
+				9FEE08B4214A27F3001EA6EA /* PredictCoverageViewController.swift */,
+				9FEE08B6214A3886001EA6EA /* PredictCoverageView.swift */,
+				9FEE08B8214A4557001EA6EA /* PredictIntCell.swift */,
 			);
 			path = Predict;
 			sourceTree = "<group>";
@@ -251,6 +268,7 @@
 		9FBF07752144EF21004AC908 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9FEE091F214B3756001EA6EA /* MainColors.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -262,6 +280,14 @@
 				9F13D2FA214069FF00F44527 /* DominantImageColors.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9FEE08BA214A6CFA001EA6EA /* PredictionsList */ = {
+			isa = PBXGroup;
+			children = (
+				9FEE08BB214A6D26001EA6EA /* PredictionsListTableViewController.swift */,
+			);
+			path = PredictionsList;
 			sourceTree = "<group>";
 		};
 		EFA753EF031062CDE3EB2691 /* Pods */ = {
@@ -473,11 +499,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SmartSpray/Pods-SmartSpray-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/EZLoadingActivity/EZLoadingActivity.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/IGRPhotoTweaks/IGRPhotoTweaks.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZLoadingActivity.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGRPhotoTweaks.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,11 +524,17 @@
 				9F13D230213E5A7000F44527 /* ImageColorQuantization.xcdatamodeld in Sources */,
 				9FBF07922144F5F3004AC908 /* CaptureView.swift in Sources */,
 				9F5A06DE21452CD700ED418D /* QuantizedImage.swift in Sources */,
+				9FEE08B5214A27F3001EA6EA /* PredictCoverageViewController.swift in Sources */,
+				9F5A06E22145BEF800ED418D /* SaveFormViewController.swift in Sources */,
+				9FEE08B7214A3886001EA6EA /* PredictCoverageView.swift in Sources */,
 				9FBF07782144EFDC004AC908 /* ProcessViewController.swift in Sources */,
+				9FEE08BC214A6D26001EA6EA /* PredictionsListTableViewController.swift in Sources */,
 				9F5A06DC2145240500ED418D /* ProcessView.swift in Sources */,
+				9FEE0920214B3756001EA6EA /* MainColors.swift in Sources */,
 				9F13D2FD21409B1100F44527 /* ImageColorQuantization.swift in Sources */,
 				9F5A06D82145101600ED418D /* CropView.swift in Sources */,
 				9F5A06E021452CFF00ED418D /* RGBA32.swift in Sources */,
+				9FEE08B9214A4557001EA6EA /* PredictIntCell.swift in Sources */,
 				9F13D228213E5A7000F44527 /* AppDelegate.swift in Sources */,
 				9FBF0794214500C6004AC908 /* CropViewController.swift in Sources */,
 				9F13D2FB214069FF00F44527 /* DominantImageColors.swift in Sources */,

@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import IGRPhotoTweaks
+import EZLoadingActivity
 
 class CaptureViewController: UIViewController {
     
@@ -32,6 +33,10 @@ class CaptureViewController: UIViewController {
     let cardImageView: UIImageView = {
         let imageView = UIImageView()
         return imageView
+    }()
+    
+    let screenEdgePanGestureRecognizer = {
+       let gesture = UIScreenEdgePanGestureRecognizer()
     }()
     
     
@@ -102,7 +107,9 @@ extension CaptureViewController: AVCapturePhotoCaptureDelegate {
             let cropVC = CropViewController()
             cropVC.delegate = self
             cropVC.image = image
-            navigationController?.pushViewController(cropVC, animated: true)
+            if !(navigationController?.topViewController is CropViewController) {
+                navigationController?.pushViewController(cropVC, animated: true)
+            }
         }
     }
 }
@@ -112,7 +119,9 @@ extension CaptureViewController: IGRPhotoTweakViewControllerDelegate {
         let image = croppedImage
         let processVC = ProcessViewController()
         processVC.imageView.image = image
-        present(processVC, animated: false, completion: nil)
+        if !(navigationController?.topViewController is ProcessViewController) {
+            navigationController?.pushViewController(processVC, animated: true)
+        }
     }
     
     func photoTweaksControllerDidCancel(_ controller: IGRPhotoTweakViewController) {

@@ -25,8 +25,8 @@ class ProcessViewController: UIViewController {
     
     let saveButton: UIButton = {
         let button = UIButton()
+        button.addTarget(self, action: #selector(saveButtonTouch(_:)), for: UIControlEvents.touchUpInside)
         button.setTitle("Save", for: UIControlState.normal)
-        button.backgroundColor = UIColor.white
         return button
     }()
     
@@ -36,44 +36,64 @@ class ProcessViewController: UIViewController {
         return label
     }()
     
+    let doneBarButton: UIBarButtonItem = {
+        let barButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: nil, action: #selector(doneBarButtonTouch))
+        return barButton
+    }()
+    
     var rgbValues: [Dictionary<String, Int>]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setViews()
         EZLoadingActivity.show("Processing Image...", disableUI: true)
+        setViews()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        guard let image = imageView.image else { return }
-        
-        let yellow = Color(r: 255, g: 255, b: 0)
-        let blue = Color(r: 0, g: 0, b: 255)
-        let black = Color(r: 255, g: 255, b: 255)
-        let white = Color(r: 0, g: 0, b: 0)
-
-        
-        let colors = [yellow, blue]
-
-        image.quantizeImage { (quantizedImage) in
-            EZLoadingActivity.hide(true, animated: true)
+        if self.isMovingToParentViewController {
+            guard let image = imageView.image else { return }
             
-            self.imageView.image = quantizedImage as! UIImage
+            let yellow = Color(r: 255, g: 255, b: 0)
+            let blue = Color(r: 0, g: 0, b: 255)
+            let black = Color(r: 255, g: 255, b: 255)
+            let white = Color(r: 0, g: 0, b: 0)
             
             
+            let colors = [yellow, blue]
             
-            quantizedImage.colorPalette.forEach({ (color) in
-                if color.colorDiff(otherColor: black) < color.colorDiff(otherColor: white) {
-                    let percentCoverage = (color.percentCoverage! * 100).rounded() / 100
-                    self.showPercentageLabel(percent: percentCoverage)
-                }
-            })
+            image.quantizeImage(colors: colors, quality: .lower) { (quantizedImage) in
+                EZLoadingActivity.hide(true, animated: true)
+                
+                self.imageView.image = quantizedImage as! UIImage
+                
+                
+                
+                quantizedImage.colorPalette.forEach({ (color) in
+                    if color.colorDiff(otherColor: blue) < color.colorDiff(otherColor: yellow) {
+                        let percentCoverage = (color.percentCoverage! * 100).rounded() / 100
+                        self.showPercentageLabel(percent: percentCoverage)
+                    }
+                })
+            }
+            
+            doneBarButton.target = self
+            navigationItem.rightBarButtonItem = doneBarButton
         }
-
         
-        
+    }
+    
+    @objc func doneBarButtonTouch() {
+        navigationController?.popToViewController((navigationController?.viewControllers[0])!, animated: true)
+    }
+    
+    @objc func saveButtonTouch(_ sender: UIButton) {
+        let saveFormVC = SaveFormViewController()
+        if !(navigationController?.topViewController is SaveFormViewController) {
+            navigationController?.pushViewController(saveFormVC, animated: true)
+        }
     }
     
     func showPercentageLabel(percent: Double) {
