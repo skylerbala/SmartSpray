@@ -23,6 +23,19 @@ extension PredictCoverageViewController {
 //            predictButton.heightAnchor.constraint(equalToConstant: 50)
 //        ])
     }
+    
+    func setNavigationBar() {
+        let loginButton = UIButton(type: .custom)
+        loginButton.setImage(UIImage.init(named: "login-50"), for: .normal)
+        
+        let loginBarItem = UIBarButtonItem(customView: loginButton)
+        loginBarItem.customView?.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        loginBarItem.customView?.heightAnchor.constraint(equalToConstant: 35).isActive =  true
+        
+        navigationItem.leftBarButtonItem = loginBarItem
+        
+        navigationController?.navigationBar.barTintColor = UIColor.SmartSpray.yellow
+    }
 }
 
 //button has logo on it

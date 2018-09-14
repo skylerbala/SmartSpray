@@ -20,27 +20,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let tabBarVC = UITabBarController()
+//        let tabBarVC = UITabBarController()
+//
+//        let predictionsListVC = PredictionsListViewController()
+//        predictionsListVC.title = "Predictions"
+//
+//        let captureVC = CaptureViewController()
+//        captureVC.title = "Capture"
+//
+//        let predictVC = PredictCoverageViewController()
+//        predictVC.title = "Predict"
+//
+//        let vcs = [predictVC, captureVC, predictionsListVC]
+//
+//        tabBarVC.viewControllers = vcs.map({ (vc) -> UIViewController in
+//            let navController = UINavigationController(rootViewController: vc)
+//            let logoImageView = UIImageView(image: UIImage(named: "navBarLogo"))
+//            logoImageView.contentMode = .scaleAspectFit
+//
+//            navController.navigationBar.topItem?.titleView = logoImageView
+//
+//            return navController
+//        })
+        
+        // tab bar always going to have logo
+        // on the left of ttab bar we have an account login
+        // we will use a uiscreen edge
+
+        let captureVC = CaptureViewController()
+        captureVC.title = "Capture"
+
+        let predictVC = PredictCoverageViewController()
+        predictVC.title = "Predict"
         
         let predictionsListVC = PredictionsListViewController()
         predictionsListVC.title = "Predictions"
         
-        let captureVC = CaptureViewController()
-        captureVC.title = "Capture"
-        
-        
-        let predictVC = PredictCoverageViewController()
-        predictVC.title = "Predict Coverage"
-        
         let vcs = [captureVC, predictVC, predictionsListVC]
-        
-        tabBarVC.viewControllers = vcs.map({ (vc) -> UIViewController in
-            return UINavigationController(rootViewController: vc)
+        let navVCs = vcs.map({ (vc) -> UIViewController in
+            let navController = UINavigationController(rootViewController: vc)
+            let logoImageView = UIImageView(image: UIImage(named: "navBarLogo"))
+            logoImageView.contentMode = .scaleAspectFit
+
+            navController.navigationBar.topItem?.titleView = logoImageView
+
+            return navController
         })
         
+        let mainContainerVC = MainContainerViewController.containerViewWith(leftVC: vcs[0], middleVC: vcs[1], rightVC: vcs[2])
         
-        
-        window?.rootViewController = tabBarVC
+        window?.rootViewController = UINavigationController(rootViewController: mainContainerVC)
 
         
         window?.makeKeyAndVisible()

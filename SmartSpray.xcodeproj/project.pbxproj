@@ -28,11 +28,13 @@
 		9FBF07782144EFDC004AC908 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF07772144EFDC004AC908 /* ProcessViewController.swift */; };
 		9FBF07922144F5F3004AC908 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF07912144F5F3004AC908 /* CaptureView.swift */; };
 		9FBF0794214500C6004AC908 /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF0793214500C6004AC908 /* CropViewController.swift */; };
+		9FD29554214C4E480044765B /* MainContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD29553214C4E480044765B /* MainContainerViewController.swift */; };
 		9FEE08B5214A27F3001EA6EA /* PredictCoverageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE08B4214A27F3001EA6EA /* PredictCoverageViewController.swift */; };
 		9FEE08B7214A3886001EA6EA /* PredictCoverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE08B6214A3886001EA6EA /* PredictCoverageView.swift */; };
 		9FEE08B9214A4557001EA6EA /* PredictIntCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE08B8214A4557001EA6EA /* PredictIntCell.swift */; };
 		9FEE08BC214A6D26001EA6EA /* PredictionsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE08BB214A6D26001EA6EA /* PredictionsListTableViewController.swift */; };
 		9FEE0920214B3756001EA6EA /* MainColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE091F214B3756001EA6EA /* MainColors.swift */; };
+		9FEE0924214C38C2001EA6EA /* PredictionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE0923214C38C2001EA6EA /* PredictionsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,11 +85,13 @@
 		9FBF07772144EFDC004AC908 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
 		9FBF07912144F5F3004AC908 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
 		9FBF0793214500C6004AC908 /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
+		9FD29553214C4E480044765B /* MainContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerViewController.swift; sourceTree = "<group>"; };
 		9FEE08B4214A27F3001EA6EA /* PredictCoverageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictCoverageViewController.swift; sourceTree = "<group>"; };
 		9FEE08B6214A3886001EA6EA /* PredictCoverageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictCoverageView.swift; sourceTree = "<group>"; };
 		9FEE08B8214A4557001EA6EA /* PredictIntCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictIntCell.swift; sourceTree = "<group>"; };
 		9FEE08BB214A6D26001EA6EA /* PredictionsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionsListTableViewController.swift; sourceTree = "<group>"; };
 		9FEE091F214B3756001EA6EA /* MainColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainColors.swift; sourceTree = "<group>"; };
+		9FEE0923214C38C2001EA6EA /* PredictionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionsListView.swift; sourceTree = "<group>"; };
 		A03F89954BB909D1D0A29462 /* Pods_SmartSprayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartSprayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA190A4CC7C83904B0FED9A /* Pods-SmartSpray.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartSpray.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartSpray/Pods-SmartSpray.debug.xcconfig"; sourceTree = "<group>"; };
 		EC9917E639705C9192D7DF61 /* Pods-SmartSprayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartSprayUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartSprayUITests/Pods-SmartSprayUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				9F13D227213E5A7000F44527 /* AppDelegate.swift */,
+				9FD29553214C4E480044765B /* MainContainerViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				9FEE08BB214A6D26001EA6EA /* PredictionsListTableViewController.swift */,
+				9FEE0923214C38C2001EA6EA /* PredictionsListView.swift */,
 			);
 			path = PredictionsList;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				9F13D22A213E5A7000F44527 /* CaptureViewController.swift in Sources */,
 				9F13D230213E5A7000F44527 /* ImageColorQuantization.xcdatamodeld in Sources */,
 				9FBF07922144F5F3004AC908 /* CaptureView.swift in Sources */,
+				9FEE0924214C38C2001EA6EA /* PredictionsListView.swift in Sources */,
 				9F5A06DE21452CD700ED418D /* QuantizedImage.swift in Sources */,
 				9FEE08B5214A27F3001EA6EA /* PredictCoverageViewController.swift in Sources */,
 				9F5A06E22145BEF800ED418D /* SaveFormViewController.swift in Sources */,
@@ -538,6 +545,7 @@
 				9F13D228213E5A7000F44527 /* AppDelegate.swift in Sources */,
 				9FBF0794214500C6004AC908 /* CropViewController.swift in Sources */,
 				9F13D2FB214069FF00F44527 /* DominantImageColors.swift in Sources */,
+				9FD29554214C4E480044765B /* MainContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

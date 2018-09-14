@@ -36,6 +36,8 @@ class PredictCoverageViewController: FormViewController {
         super.viewDidLoad()
         createForm()
         setViews()
+        setNavigationBar()
+
     }
     
     func predictButtonTouch() {

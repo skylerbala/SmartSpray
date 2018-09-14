@@ -47,7 +47,7 @@ class ProcessViewController: UIViewController {
         super.viewDidLoad()
         EZLoadingActivity.show("Processing Image...", disableUI: true)
         setViews()
-
+        navigationController?.navigationBar.barTintColor = UIColor.SmartSpray.yellow
     }
     
     override func viewDidAppear(_ animated: Bool) {

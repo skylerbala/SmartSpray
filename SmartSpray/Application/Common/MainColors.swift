@@ -11,6 +11,6 @@ import UIKit
 
 extension UIColor {
     struct SmartSpray {
-        static var yellow: UIColor { return UIColor(red: 231/255, green: 252/255, blue: 65/255, alpha: 1) }
+        static var yellow: UIColor { return UIColor.init(displayP3Red: 236.0/255.0, green: 254.0/255.0, blue: 83.0/255.0, alpha: 1.0) }
     }
 }
