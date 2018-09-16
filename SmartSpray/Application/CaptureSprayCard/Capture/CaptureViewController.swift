@@ -50,6 +50,11 @@ class CaptureViewController: UIViewController {
         setupInputOutput()
         setupPreviewLayer()
         startRunningCaptureSession()
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.displayTabBar(isHidden: false)
     }
     
     func setupCaptureSession() {
@@ -119,16 +124,15 @@ extension CaptureViewController: AVCapturePhotoCaptureDelegate {
 extension CaptureViewController: IGRPhotoTweakViewControllerDelegate {
     func photoTweaksController(_ controller: IGRPhotoTweakViewController, didFinishWithCroppedImage croppedImage: UIImage) {
         let image = croppedImage
-        let processVC = ProcessViewController()
-        processVC.imageView.image = image
-        if !(navigationController?.topViewController is ProcessViewController) {
-            navigationController?.pushViewController(processVC, animated: true)
+        let analyzeVC = AnalyzeViewController()
+        analyzeVC.imageView.image = image
+        if !(navigationController?.topViewController is AnalyzeViewController) {
+            navigationController?.pushViewController(analyzeVC, animated: true)
         }
     }
     
     func photoTweaksControllerDidCancel(_ controller: IGRPhotoTweakViewController) {
         controller.navigationController?.popViewController(animated: false)
     }
-    
-    
+
 }

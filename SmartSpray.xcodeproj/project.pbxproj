@@ -21,14 +21,18 @@
 		9F13D2FB214069FF00F44527 /* DominantImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D2FA214069FF00F44527 /* DominantImageColors.swift */; };
 		9F13D2FD21409B1100F44527 /* ImageColorQuantization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D2FC21409B1100F44527 /* ImageColorQuantization.swift */; };
 		9F5A06D82145101600ED418D /* CropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06D72145101600ED418D /* CropView.swift */; };
-		9F5A06DC2145240500ED418D /* ProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06DB2145240500ED418D /* ProcessView.swift */; };
+		9F5A06DC2145240500ED418D /* AnalyzeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06DB2145240500ED418D /* AnalyzeView.swift */; };
 		9F5A06DE21452CD700ED418D /* QuantizedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06DD21452CD700ED418D /* QuantizedImage.swift */; };
 		9F5A06E021452CFF00ED418D /* RGBA32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06DF21452CFF00ED418D /* RGBA32.swift */; };
 		9F5A06E22145BEF800ED418D /* SaveFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06E12145BEF800ED418D /* SaveFormViewController.swift */; };
-		9FBF07782144EFDC004AC908 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF07772144EFDC004AC908 /* ProcessViewController.swift */; };
+		9FBF07782144EFDC004AC908 /* AnalyzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF07772144EFDC004AC908 /* AnalyzeViewController.swift */; };
 		9FBF07922144F5F3004AC908 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF07912144F5F3004AC908 /* CaptureView.swift */; };
 		9FBF0794214500C6004AC908 /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF0793214500C6004AC908 /* CropViewController.swift */; };
 		9FD29554214C4E480044765B /* MainContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD29553214C4E480044765B /* MainContainerViewController.swift */; };
+		9FD29556214CB6E30044765B /* CropActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD29555214CB6E30044765B /* CropActions.swift */; };
+		9FD29558214D8ECF0044765B /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD29557214D8ECF0044765B /* TabBar.swift */; };
+		9FD2955A214D9DCC0044765B /* AnalyzeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD29559214D9DCC0044765B /* AnalyzeActions.swift */; };
+		9FD29561214E2C8B0044765B /* PredictCoverageForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD29560214E2C8B0044765B /* PredictCoverageForm.swift */; };
 		9FEE08B5214A27F3001EA6EA /* PredictCoverageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE08B4214A27F3001EA6EA /* PredictCoverageViewController.swift */; };
 		9FEE08B7214A3886001EA6EA /* PredictCoverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE08B6214A3886001EA6EA /* PredictCoverageView.swift */; };
 		9FEE08B9214A4557001EA6EA /* PredictIntCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE08B8214A4557001EA6EA /* PredictIntCell.swift */; };
@@ -78,14 +82,18 @@
 		9F13D2FA214069FF00F44527 /* DominantImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominantImageColors.swift; sourceTree = "<group>"; };
 		9F13D2FC21409B1100F44527 /* ImageColorQuantization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageColorQuantization.swift; sourceTree = "<group>"; };
 		9F5A06D72145101600ED418D /* CropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropView.swift; sourceTree = "<group>"; };
-		9F5A06DB2145240500ED418D /* ProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessView.swift; sourceTree = "<group>"; };
+		9F5A06DB2145240500ED418D /* AnalyzeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeView.swift; sourceTree = "<group>"; };
 		9F5A06DD21452CD700ED418D /* QuantizedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantizedImage.swift; sourceTree = "<group>"; };
 		9F5A06DF21452CFF00ED418D /* RGBA32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBA32.swift; sourceTree = "<group>"; };
 		9F5A06E12145BEF800ED418D /* SaveFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFormViewController.swift; sourceTree = "<group>"; };
-		9FBF07772144EFDC004AC908 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
+		9FBF07772144EFDC004AC908 /* AnalyzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeViewController.swift; sourceTree = "<group>"; };
 		9FBF07912144F5F3004AC908 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
 		9FBF0793214500C6004AC908 /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
 		9FD29553214C4E480044765B /* MainContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerViewController.swift; sourceTree = "<group>"; };
+		9FD29555214CB6E30044765B /* CropActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropActions.swift; sourceTree = "<group>"; };
+		9FD29557214D8ECF0044765B /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		9FD29559214D9DCC0044765B /* AnalyzeActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeActions.swift; sourceTree = "<group>"; };
+		9FD29560214E2C8B0044765B /* PredictCoverageForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictCoverageForm.swift; sourceTree = "<group>"; };
 		9FEE08B4214A27F3001EA6EA /* PredictCoverageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictCoverageViewController.swift; sourceTree = "<group>"; };
 		9FEE08B6214A3886001EA6EA /* PredictCoverageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictCoverageView.swift; sourceTree = "<group>"; };
 		9FEE08B8214A4557001EA6EA /* PredictIntCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictIntCell.swift; sourceTree = "<group>"; };
@@ -196,18 +204,19 @@
 			children = (
 				9FBF0793214500C6004AC908 /* CropViewController.swift */,
 				9F5A06D72145101600ED418D /* CropView.swift */,
+				9FD29555214CB6E30044765B /* CropActions.swift */,
 			);
 			path = Crop;
 			sourceTree = "<group>";
 		};
-		9F5A06DA214522AA00ED418D /* Process */ = {
+		9F5A06DA214522AA00ED418D /* Analyze */ = {
 			isa = PBXGroup;
 			children = (
-				9FBF07772144EFDC004AC908 /* ProcessViewController.swift */,
-				9F5A06DB2145240500ED418D /* ProcessView.swift */,
-				9F5A06E12145BEF800ED418D /* SaveFormViewController.swift */,
+				9FBF07772144EFDC004AC908 /* AnalyzeViewController.swift */,
+				9F5A06DB2145240500ED418D /* AnalyzeView.swift */,
+				9FD29559214D9DCC0044765B /* AnalyzeActions.swift */,
 			);
-			path = Process;
+			path = Analyze;
 			sourceTree = "<group>";
 		};
 		9FBF076D2144EE5D004AC908 /* Models */ = {
@@ -222,14 +231,12 @@
 		9FBF076E2144EE68004AC908 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				9FBF07742144EEEB004AC908 /* Main */,
+				9FBF07732144EE9C004AC908 /* Predict */,
+				9FD2955E214D9E580044765B /* CaptureSprayCard */,
 				9FEE08BA214A6CFA001EA6EA /* PredictionsList */,
 				9FBF07762144EF26004AC908 /* Extensions */,
 				9FBF07752144EF21004AC908 /* Common */,
-				9FBF07742144EEEB004AC908 /* Main */,
-				9FBF07732144EE9C004AC908 /* Predict */,
-				9FBF07722144EE97004AC908 /* Capture */,
-				9F5A06DA214522AA00ED418D /* Process */,
-				9F5A06D9214522A500ED418D /* Crop */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -255,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				9FEE08B4214A27F3001EA6EA /* PredictCoverageViewController.swift */,
+				9FD29560214E2C8B0044765B /* PredictCoverageForm.swift */,
 				9FEE08B6214A3886001EA6EA /* PredictCoverageView.swift */,
 				9FEE08B8214A4557001EA6EA /* PredictIntCell.swift */,
 			);
@@ -274,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				9FEE091F214B3756001EA6EA /* MainColors.swift */,
+				9FD29557214D8ECF0044765B /* TabBar.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -285,6 +294,25 @@
 				9F13D2FA214069FF00F44527 /* DominantImageColors.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9FD2955E214D9E580044765B /* CaptureSprayCard */ = {
+			isa = PBXGroup;
+			children = (
+				9FBF07722144EE97004AC908 /* Capture */,
+				9F5A06D9214522A500ED418D /* Crop */,
+				9F5A06DA214522AA00ED418D /* Analyze */,
+				9FD2955F214E00400044765B /* Save */,
+			);
+			path = CaptureSprayCard;
+			sourceTree = "<group>";
+		};
+		9FD2955F214E00400044765B /* Save */ = {
+			isa = PBXGroup;
+			children = (
+				9F5A06E12145BEF800ED418D /* SaveFormViewController.swift */,
+			);
+			path = Save;
 			sourceTree = "<group>";
 		};
 		9FEE08BA214A6CFA001EA6EA /* PredictionsList */ = {
@@ -530,14 +558,17 @@
 				9F13D230213E5A7000F44527 /* ImageColorQuantization.xcdatamodeld in Sources */,
 				9FBF07922144F5F3004AC908 /* CaptureView.swift in Sources */,
 				9FEE0924214C38C2001EA6EA /* PredictionsListView.swift in Sources */,
+				9FD29558214D8ECF0044765B /* TabBar.swift in Sources */,
 				9F5A06DE21452CD700ED418D /* QuantizedImage.swift in Sources */,
 				9FEE08B5214A27F3001EA6EA /* PredictCoverageViewController.swift in Sources */,
+				9FD29561214E2C8B0044765B /* PredictCoverageForm.swift in Sources */,
 				9F5A06E22145BEF800ED418D /* SaveFormViewController.swift in Sources */,
 				9FEE08B7214A3886001EA6EA /* PredictCoverageView.swift in Sources */,
-				9FBF07782144EFDC004AC908 /* ProcessViewController.swift in Sources */,
+				9FBF07782144EFDC004AC908 /* AnalyzeViewController.swift in Sources */,
 				9FEE08BC214A6D26001EA6EA /* PredictionsListTableViewController.swift in Sources */,
-				9F5A06DC2145240500ED418D /* ProcessView.swift in Sources */,
+				9F5A06DC2145240500ED418D /* AnalyzeView.swift in Sources */,
 				9FEE0920214B3756001EA6EA /* MainColors.swift in Sources */,
+				9FD29556214CB6E30044765B /* CropActions.swift in Sources */,
 				9F13D2FD21409B1100F44527 /* ImageColorQuantization.swift in Sources */,
 				9F5A06D82145101600ED418D /* CropView.swift in Sources */,
 				9F5A06E021452CFF00ED418D /* RGBA32.swift in Sources */,
@@ -545,6 +576,7 @@
 				9F13D228213E5A7000F44527 /* AppDelegate.swift in Sources */,
 				9FBF0794214500C6004AC908 /* CropViewController.swift in Sources */,
 				9F13D2FB214069FF00F44527 /* DominantImageColors.swift in Sources */,
+				9FD2955A214D9DCC0044765B /* AnalyzeActions.swift in Sources */,
 				9FD29554214C4E480044765B /* MainContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

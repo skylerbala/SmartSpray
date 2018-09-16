@@ -9,24 +9,43 @@
 import UIKit
 import CoreGraphics
 import EZLoadingActivity
+import IGRPhotoTweaks
 
-class ProcessViewController: UIViewController {
+class AnalyzeViewController: UIViewController {
     
     var imageView: UIImageView = {
         let view = UIImageView()
+        view.contentMode = .scaleAspectFit
+        view.backgroundColor = UIColor.black
+        view.layer.borderWidth = 5
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 1
+        view.layer.shadowOffset = CGSize.zero
+        view.layer.shadowRadius = 10
+        view.layer.shouldRasterize = true
         return view
     }()
     
     let mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.green
+        view.backgroundColor = UIColor.SmartSpray.green
         return view
+    }()
+    
+    let doneButton: UIButton = {
+        let button = UIButton()
+        button.addTarget(self, action: #selector(doneButtonTouch(_:)), for: UIControlEvents.touchUpInside)
+        button.setTitle("Done", for: UIControlState.normal)
+        button.backgroundColor = UIColor.SmartSpray.blue
+        return button
     }()
     
     let saveButton: UIButton = {
         let button = UIButton()
         button.addTarget(self, action: #selector(saveButtonTouch(_:)), for: UIControlEvents.touchUpInside)
-        button.setTitle("Save", for: UIControlState.normal)
+        button.setTitle("Save & Done", for: UIControlState.normal)
+        button.backgroundColor = UIColor.SmartSpray.blue
         return button
     }()
     
@@ -36,11 +55,6 @@ class ProcessViewController: UIViewController {
         return label
     }()
     
-    let doneBarButton: UIBarButtonItem = {
-        let barButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: nil, action: #selector(doneBarButtonTouch))
-        return barButton
-    }()
-    
     var rgbValues: [Dictionary<String, Int>]!
     
     override func viewDidLoad() {
@@ -48,6 +62,7 @@ class ProcessViewController: UIViewController {
         EZLoadingActivity.show("Processing Image...", disableUI: true)
         setViews()
         navigationController?.navigationBar.barTintColor = UIColor.SmartSpray.yellow
+        tabBarController?.displayTabBar(isHidden: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -78,26 +93,11 @@ class ProcessViewController: UIViewController {
                     }
                 })
             }
-            
-            doneBarButton.target = self
-            navigationItem.rightBarButtonItem = doneBarButton
         }
         
-    }
-    
-    @objc func doneBarButtonTouch() {
-        navigationController?.popToViewController((navigationController?.viewControllers[0])!, animated: true)
-    }
-    
-    @objc func saveButtonTouch(_ sender: UIButton) {
-        let saveFormVC = SaveFormViewController()
-        if !(navigationController?.topViewController is SaveFormViewController) {
-            navigationController?.pushViewController(saveFormVC, animated: true)
-        }
     }
     
     func showPercentageLabel(percent: Double) {
         percentCoverageLabel.text = "Percent Coverage: \(percent)%"
     }
 }
-

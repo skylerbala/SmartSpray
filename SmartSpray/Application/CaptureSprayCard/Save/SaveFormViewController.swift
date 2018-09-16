@@ -35,11 +35,12 @@ class SaveFormViewController: FormViewController {
                 })
             <<< TextAreaRow(){
                 $0.title = "Description"
-                $0.value = "Enter description here"
+                $0.placeholder = "Enter description here"
         }
         
         saveBarButton.target = self
         navigationItem.rightBarButtonItem = saveBarButton
+        tabBarController?.displayTabBar(isHidden: true)
     }
     
     @objc func saveBarButtonTouch() {
