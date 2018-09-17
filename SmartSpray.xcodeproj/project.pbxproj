@@ -30,9 +30,37 @@
 		9FBF0794214500C6004AC908 /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF0793214500C6004AC908 /* CropViewController.swift */; };
 		9FD29554214C4E480044765B /* MainContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD29553214C4E480044765B /* MainContainerViewController.swift */; };
 		9FD29556214CB6E30044765B /* CropActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD29555214CB6E30044765B /* CropActions.swift */; };
-		9FD29558214D8ECF0044765B /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD29557214D8ECF0044765B /* TabBar.swift */; };
+		9FD29558214D8ECF0044765B /* UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD29557214D8ECF0044765B /* UITabBarController.swift */; };
 		9FD2955A214D9DCC0044765B /* AnalyzeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD29559214D9DCC0044765B /* AnalyzeActions.swift */; };
 		9FD29561214E2C8B0044765B /* PredictCoverageForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD29560214E2C8B0044765B /* PredictCoverageForm.swift */; };
+		9FD29564214F003E0044765B /* ImageScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD29563214F003E0044765B /* ImageScannerViewController.swift */; };
+		9FD295C6214F0F050044765B /* EditScanCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295A5214F0F050044765B /* EditScanCornerView.swift */; };
+		9FD295C7214F0F050044765B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295A6214F0F050044765B /* Error.swift */; };
+		9FD295C8214F0F050044765B /* Quadrilateral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295A7214F0F050044765B /* Quadrilateral.swift */; };
+		9FD295C9214F0F050044765B /* QuadrilateralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295A8214F0F050044765B /* QuadrilateralView.swift */; };
+		9FD295CA214F0F050044765B /* RectangleDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295A9214F0F050044765B /* RectangleDetector.swift */; };
+		9FD295CB214F0F050044765B /* EditScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295AB214F0F050044765B /* EditScanViewController.swift */; };
+		9FD295CC214F0F050044765B /* ZoomGestureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295AC214F0F050044765B /* ZoomGestureController.swift */; };
+		9FD295CD214F0F050044765B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD295AD214F0F050044765B /* Localizable.strings */; };
+		9FD295CE214F0F050044765B /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295B0214F0F050044765B /* Array+Utils.swift */; };
+		9FD295CF214F0F050044765B /* AVCaptureVideoOrientation+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295B1214F0F050044765B /* AVCaptureVideoOrientation+Utils.swift */; };
+		9FD295D0214F0F050044765B /* CGAffineTransform+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295B2214F0F050044765B /* CGAffineTransform+Utils.swift */; };
+		9FD295D1214F0F050044765B /* CGPoint+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295B3214F0F050044765B /* CGPoint+Utils.swift */; };
+		9FD295D2214F0F050044765B /* CGRect+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295B4214F0F050044765B /* CGRect+Utils.swift */; };
+		9FD295D3214F0F050044765B /* CIRectangleFeature+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295B5214F0F050044765B /* CIRectangleFeature+Utils.swift */; };
+		9FD295D4214F0F050044765B /* UIImage+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295B6214F0F050044765B /* UIImage+Orientation.swift */; };
+		9FD295D5214F0F050044765B /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295B7214F0F050044765B /* UIImage+Utils.swift */; };
+		9FD295D6214F0F050044765B /* ImageScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295B8214F0F050044765B /* ImageScannerController.swift */; };
+		9FD295D7214F0F050044765B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FD295B9214F0F050044765B /* Info.plist */; };
+		9FD295D8214F0F050044765B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD295BA214F0F050044765B /* Localizable.strings */; };
+		9FD295D9214F0F050044765B /* Transformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295BC214F0F050044765B /* Transformable.swift */; };
+		9FD295DA214F0F050044765B /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295BE214F0F050044765B /* ReviewViewController.swift */; };
+		9FD295DB214F0F050044765B /* CaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295C0214F0F050044765B /* CaptureSessionManager.swift */; };
+		9FD295DC214F0F050044765B /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295C1214F0F050044765B /* CloseButton.swift */; };
+		9FD295DD214F0F050044765B /* RectangleFeaturesFunnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295C2214F0F050044765B /* RectangleFeaturesFunnel.swift */; };
+		9FD295DE214F0F050044765B /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295C3214F0F050044765B /* ScannerViewController.swift */; };
+		9FD295DF214F0F050044765B /* ShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295C4214F0F050044765B /* ShutterButton.swift */; };
+		9FD295E1214F0F9B0044765B /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD295E0214F0F9B0044765B /* UINavigationController.swift */; };
 		9FEE08B5214A27F3001EA6EA /* PredictCoverageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE08B4214A27F3001EA6EA /* PredictCoverageViewController.swift */; };
 		9FEE08B7214A3886001EA6EA /* PredictCoverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE08B6214A3886001EA6EA /* PredictCoverageView.swift */; };
 		9FEE08B9214A4557001EA6EA /* PredictIntCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE08B8214A4557001EA6EA /* PredictIntCell.swift */; };
@@ -91,9 +119,38 @@
 		9FBF0793214500C6004AC908 /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
 		9FD29553214C4E480044765B /* MainContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerViewController.swift; sourceTree = "<group>"; };
 		9FD29555214CB6E30044765B /* CropActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropActions.swift; sourceTree = "<group>"; };
-		9FD29557214D8ECF0044765B /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		9FD29557214D8ECF0044765B /* UITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarController.swift; sourceTree = "<group>"; };
 		9FD29559214D9DCC0044765B /* AnalyzeActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeActions.swift; sourceTree = "<group>"; };
 		9FD29560214E2C8B0044765B /* PredictCoverageForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictCoverageForm.swift; sourceTree = "<group>"; };
+		9FD29563214F003E0044765B /* ImageScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScannerViewController.swift; sourceTree = "<group>"; };
+		9FD295A5214F0F050044765B /* EditScanCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditScanCornerView.swift; sourceTree = "<group>"; };
+		9FD295A6214F0F050044765B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		9FD295A7214F0F050044765B /* Quadrilateral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quadrilateral.swift; sourceTree = "<group>"; };
+		9FD295A8214F0F050044765B /* QuadrilateralView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadrilateralView.swift; sourceTree = "<group>"; };
+		9FD295A9214F0F050044765B /* RectangleDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleDetector.swift; sourceTree = "<group>"; };
+		9FD295AB214F0F050044765B /* EditScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditScanViewController.swift; sourceTree = "<group>"; };
+		9FD295AC214F0F050044765B /* ZoomGestureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomGestureController.swift; sourceTree = "<group>"; };
+		9FD295AE214F0F050044765B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9FD295B0214F0F050044765B /* Array+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Utils.swift"; sourceTree = "<group>"; };
+		9FD295B1214F0F050044765B /* AVCaptureVideoOrientation+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoOrientation+Utils.swift"; sourceTree = "<group>"; };
+		9FD295B2214F0F050044765B /* CGAffineTransform+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGAffineTransform+Utils.swift"; sourceTree = "<group>"; };
+		9FD295B3214F0F050044765B /* CGPoint+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Utils.swift"; sourceTree = "<group>"; };
+		9FD295B4214F0F050044765B /* CGRect+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Utils.swift"; sourceTree = "<group>"; };
+		9FD295B5214F0F050044765B /* CIRectangleFeature+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIRectangleFeature+Utils.swift"; sourceTree = "<group>"; };
+		9FD295B6214F0F050044765B /* UIImage+Orientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Orientation.swift"; sourceTree = "<group>"; };
+		9FD295B7214F0F050044765B /* UIImage+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
+		9FD295B8214F0F050044765B /* ImageScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScannerController.swift; sourceTree = "<group>"; };
+		9FD295B9214F0F050044765B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FD295BA214F0F050044765B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		9FD295BC214F0F050044765B /* Transformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformable.swift; sourceTree = "<group>"; };
+		9FD295BE214F0F050044765B /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		9FD295C0214F0F050044765B /* CaptureSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureSessionManager.swift; sourceTree = "<group>"; };
+		9FD295C1214F0F050044765B /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		9FD295C2214F0F050044765B /* RectangleFeaturesFunnel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleFeaturesFunnel.swift; sourceTree = "<group>"; };
+		9FD295C3214F0F050044765B /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		9FD295C4214F0F050044765B /* ShutterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShutterButton.swift; sourceTree = "<group>"; };
+		9FD295C5214F0F050044765B /* WeScan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeScan.h; sourceTree = "<group>"; };
+		9FD295E0214F0F9B0044765B /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		9FEE08B4214A27F3001EA6EA /* PredictCoverageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictCoverageViewController.swift; sourceTree = "<group>"; };
 		9FEE08B6214A3886001EA6EA /* PredictCoverageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictCoverageView.swift; sourceTree = "<group>"; };
 		9FEE08B8214A4557001EA6EA /* PredictIntCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictIntCell.swift; sourceTree = "<group>"; };
@@ -168,6 +225,7 @@
 		9F13D226213E5A7000F44527 /* SmartSpray */ = {
 			isa = PBXGroup;
 			children = (
+				9FD295A3214F0F050044765B /* WeScan */,
 				9FBF076F2144EE6E004AC908 /* Assets */,
 				9FBF076E2144EE68004AC908 /* Application */,
 				9FBF076D2144EE5D004AC908 /* Models */,
@@ -282,7 +340,8 @@
 			isa = PBXGroup;
 			children = (
 				9FEE091F214B3756001EA6EA /* MainColors.swift */,
-				9FD29557214D8ECF0044765B /* TabBar.swift */,
+				9FD29557214D8ECF0044765B /* UITabBarController.swift */,
+				9FD295E0214F0F9B0044765B /* UINavigationController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -299,6 +358,7 @@
 		9FD2955E214D9E580044765B /* CaptureSprayCard */ = {
 			isa = PBXGroup;
 			children = (
+				9FD29562214F001D0044765B /* TestDocumentScanner */,
 				9FBF07722144EE97004AC908 /* Capture */,
 				9F5A06D9214522A500ED418D /* Crop */,
 				9F5A06DA214522AA00ED418D /* Analyze */,
@@ -313,6 +373,96 @@
 				9F5A06E12145BEF800ED418D /* SaveFormViewController.swift */,
 			);
 			path = Save;
+			sourceTree = "<group>";
+		};
+		9FD29562214F001D0044765B /* TestDocumentScanner */ = {
+			isa = PBXGroup;
+			children = (
+				9FD29563214F003E0044765B /* ImageScannerViewController.swift */,
+			);
+			path = TestDocumentScanner;
+			sourceTree = "<group>";
+		};
+		9FD295A3214F0F050044765B /* WeScan */ = {
+			isa = PBXGroup;
+			children = (
+				9FD295A4214F0F050044765B /* Common */,
+				9FD295AA214F0F050044765B /* Edit */,
+				9FD295AD214F0F050044765B /* Localizable.strings */,
+				9FD295AF214F0F050044765B /* Extensions */,
+				9FD295B8214F0F050044765B /* ImageScannerController.swift */,
+				9FD295B9214F0F050044765B /* Info.plist */,
+				9FD295BA214F0F050044765B /* Localizable.strings */,
+				9FD295BB214F0F050044765B /* Protocols */,
+				9FD295BD214F0F050044765B /* Review */,
+				9FD295BF214F0F050044765B /* Scan */,
+				9FD295C5214F0F050044765B /* WeScan.h */,
+			);
+			path = WeScan;
+			sourceTree = "<group>";
+		};
+		9FD295A4214F0F050044765B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9FD295A5214F0F050044765B /* EditScanCornerView.swift */,
+				9FD295A6214F0F050044765B /* Error.swift */,
+				9FD295A7214F0F050044765B /* Quadrilateral.swift */,
+				9FD295A8214F0F050044765B /* QuadrilateralView.swift */,
+				9FD295A9214F0F050044765B /* RectangleDetector.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9FD295AA214F0F050044765B /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				9FD295AB214F0F050044765B /* EditScanViewController.swift */,
+				9FD295AC214F0F050044765B /* ZoomGestureController.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		9FD295AF214F0F050044765B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9FD295B0214F0F050044765B /* Array+Utils.swift */,
+				9FD295B1214F0F050044765B /* AVCaptureVideoOrientation+Utils.swift */,
+				9FD295B2214F0F050044765B /* CGAffineTransform+Utils.swift */,
+				9FD295B3214F0F050044765B /* CGPoint+Utils.swift */,
+				9FD295B4214F0F050044765B /* CGRect+Utils.swift */,
+				9FD295B5214F0F050044765B /* CIRectangleFeature+Utils.swift */,
+				9FD295B6214F0F050044765B /* UIImage+Orientation.swift */,
+				9FD295B7214F0F050044765B /* UIImage+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9FD295BB214F0F050044765B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9FD295BC214F0F050044765B /* Transformable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9FD295BD214F0F050044765B /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				9FD295BE214F0F050044765B /* ReviewViewController.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		9FD295BF214F0F050044765B /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				9FD295C0214F0F050044765B /* CaptureSessionManager.swift */,
+				9FD295C1214F0F050044765B /* CloseButton.swift */,
+				9FD295C2214F0F050044765B /* RectangleFeaturesFunnel.swift */,
+				9FD295C3214F0F050044765B /* ScannerViewController.swift */,
+				9FD295C4214F0F050044765B /* ShutterButton.swift */,
+			);
+			path = Scan;
 			sourceTree = "<group>";
 		};
 		9FEE08BA214A6CFA001EA6EA /* PredictionsList */ = {
@@ -449,7 +599,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F13D235213E5A7000F44527 /* LaunchScreen.storyboard in Resources */,
+				9FD295D8214F0F050044765B /* Localizable.strings in Resources */,
+				9FD295CD214F0F050044765B /* Localizable.strings in Resources */,
 				9F13D232213E5A7000F44527 /* Assets.xcassets in Resources */,
+				9FD295D7214F0F050044765B /* Info.plist in Resources */,
 				9F13D22D213E5A7000F44527 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,29 +707,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD295CF214F0F050044765B /* AVCaptureVideoOrientation+Utils.swift in Sources */,
 				9F13D22A213E5A7000F44527 /* CaptureViewController.swift in Sources */,
+				9FD295D4214F0F050044765B /* UIImage+Orientation.swift in Sources */,
+				9FD295D5214F0F050044765B /* UIImage+Utils.swift in Sources */,
+				9FD295D3214F0F050044765B /* CIRectangleFeature+Utils.swift in Sources */,
 				9F13D230213E5A7000F44527 /* ImageColorQuantization.xcdatamodeld in Sources */,
+				9FD295E1214F0F9B0044765B /* UINavigationController.swift in Sources */,
 				9FBF07922144F5F3004AC908 /* CaptureView.swift in Sources */,
+				9FD295DE214F0F050044765B /* ScannerViewController.swift in Sources */,
+				9FD295CA214F0F050044765B /* RectangleDetector.swift in Sources */,
+				9FD295DF214F0F050044765B /* ShutterButton.swift in Sources */,
 				9FEE0924214C38C2001EA6EA /* PredictionsListView.swift in Sources */,
-				9FD29558214D8ECF0044765B /* TabBar.swift in Sources */,
+				9FD29558214D8ECF0044765B /* UITabBarController.swift in Sources */,
+				9FD295D9214F0F050044765B /* Transformable.swift in Sources */,
 				9F5A06DE21452CD700ED418D /* QuantizedImage.swift in Sources */,
 				9FEE08B5214A27F3001EA6EA /* PredictCoverageViewController.swift in Sources */,
+				9FD295C7214F0F050044765B /* Error.swift in Sources */,
 				9FD29561214E2C8B0044765B /* PredictCoverageForm.swift in Sources */,
+				9FD295C8214F0F050044765B /* Quadrilateral.swift in Sources */,
 				9F5A06E22145BEF800ED418D /* SaveFormViewController.swift in Sources */,
+				9FD295DB214F0F050044765B /* CaptureSessionManager.swift in Sources */,
 				9FEE08B7214A3886001EA6EA /* PredictCoverageView.swift in Sources */,
+				9FD295D1214F0F050044765B /* CGPoint+Utils.swift in Sources */,
 				9FBF07782144EFDC004AC908 /* AnalyzeViewController.swift in Sources */,
 				9FEE08BC214A6D26001EA6EA /* PredictionsListTableViewController.swift in Sources */,
 				9F5A06DC2145240500ED418D /* AnalyzeView.swift in Sources */,
 				9FEE0920214B3756001EA6EA /* MainColors.swift in Sources */,
+				9FD295C9214F0F050044765B /* QuadrilateralView.swift in Sources */,
 				9FD29556214CB6E30044765B /* CropActions.swift in Sources */,
+				9FD295DD214F0F050044765B /* RectangleFeaturesFunnel.swift in Sources */,
+				9FD295D0214F0F050044765B /* CGAffineTransform+Utils.swift in Sources */,
 				9F13D2FD21409B1100F44527 /* ImageColorQuantization.swift in Sources */,
 				9F5A06D82145101600ED418D /* CropView.swift in Sources */,
 				9F5A06E021452CFF00ED418D /* RGBA32.swift in Sources */,
+				9FD295DC214F0F050044765B /* CloseButton.swift in Sources */,
 				9FEE08B9214A4557001EA6EA /* PredictIntCell.swift in Sources */,
+				9FD295DA214F0F050044765B /* ReviewViewController.swift in Sources */,
+				9FD295CB214F0F050044765B /* EditScanViewController.swift in Sources */,
 				9F13D228213E5A7000F44527 /* AppDelegate.swift in Sources */,
 				9FBF0794214500C6004AC908 /* CropViewController.swift in Sources */,
 				9F13D2FB214069FF00F44527 /* DominantImageColors.swift in Sources */,
+				9FD295D2214F0F050044765B /* CGRect+Utils.swift in Sources */,
 				9FD2955A214D9DCC0044765B /* AnalyzeActions.swift in Sources */,
+				9FD29564214F003E0044765B /* ImageScannerViewController.swift in Sources */,
+				9FD295C6214F0F050044765B /* EditScanCornerView.swift in Sources */,
+				9FD295CC214F0F050044765B /* ZoomGestureController.swift in Sources */,
+				9FD295CE214F0F050044765B /* Array+Utils.swift in Sources */,
+				9FD295D6214F0F050044765B /* ImageScannerController.swift in Sources */,
 				9FD29554214C4E480044765B /* MainContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,6 +805,14 @@
 				9F13D234213E5A7000F44527 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9FD295AD214F0F050044765B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FD295AE214F0F050044765B /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

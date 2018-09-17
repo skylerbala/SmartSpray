@@ -13,6 +13,8 @@ import EZLoadingActivity
 
 class CaptureViewController: UIViewController {
     
+    let scannerVC = ImageScannerController()
+
     let captureSession = AVCaptureSession()
     var backCamera: AVCaptureDevice?
     var fronCamera: AVCaptureDevice?
@@ -39,18 +41,18 @@ class CaptureViewController: UIViewController {
        let gesture = UIScreenEdgePanGestureRecognizer()
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setNavigationBar()
         setViews()
-        setupCaptureSession()
+        navigationController?.setSmartSprayNavigationBar()
         setupDevice()
         setupInputOutput()
         setupPreviewLayer()
         startRunningCaptureSession()
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        
+        scannerVC.imageScannerDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -136,3 +138,25 @@ extension CaptureViewController: IGRPhotoTweakViewControllerDelegate {
     }
 
 }
+
+extension CaptureViewController: ImageScannerControllerDelegate {
+    func imageScannerController(_ scanner: ImageScannerController, didFinishScanningWithResults results: ImageScannerResults) {
+        let croppedImage = results.scannedImage
+        let analyzeVC = AnalyzeViewController()
+        analyzeVC.imageView.image = croppedImage
+        if !(navigationController?.topViewController is AnalyzeViewController) {
+            navigationController?.pushViewController(analyzeVC, animated: true)
+            scanner.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func imageScannerControllerDidCancel(_ scanner: ImageScannerController) {
+        scanner.dismiss(animated: true, completion: nil)
+    }
+    
+    func imageScannerController(_ scanner: ImageScannerController, didFailWithError error: Error) {
+        print(error)
+    }
+    
+}
+

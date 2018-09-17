@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         predictVC.tabBarItem = UITabBarItem(title: "Predict", image: #imageLiteral(resourceName: "icons8-calculator-50"), selectedImage: #imageLiteral(resourceName: "icons8-calculator-50"))
 
         
-        let captureVC = CaptureViewController()
+        let captureVC = ScannerViewController()
         captureVC.title = "Capture"
         captureVC.tabBarItem = UITabBarItem(title: "Capture", image: #imageLiteral(resourceName: "icons8-screenshot-50"), selectedImage: #imageLiteral(resourceName: "icons8-screenshot-50"))
 

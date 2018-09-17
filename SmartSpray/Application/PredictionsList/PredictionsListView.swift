@@ -10,14 +10,4 @@ import Foundation
 import UIKit
 
 extension PredictionsListViewController {
-    func setNavigationBar() {
-        
-        let loginButton = UIButton(type: .custom)
-        loginButton.setImage(UIImage.init(named: "login-50"), for: .highlighted)
-        
-        let loginBarItem = UIBarButtonItem(customView: loginButton)
-        loginBarItem.customView?.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        loginBarItem.customView?.heightAnchor.constraint(equalToConstant: 35).isActive =  true
-        
-    }
 }
