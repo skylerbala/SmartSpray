@@ -16,7 +16,7 @@ extension PredictCoverageViewController {
         
         let sprayVolumeRow = IntRow() { row in
             row.title = "Spray Volume"
-            row.tag = "sprayVolume"
+            row.tag = "spray_volume"
             let units = "\(MetricRanges.sprayVolumeMin.rawValue)-\(MetricRanges.sprayVolumeMax.rawValue) L/ha"
             row.placeholder = units
             row.add(rule: RuleRequired())
@@ -31,7 +31,7 @@ extension PredictCoverageViewController {
         
         let adjuvantRow = SwitchRow() { row in
             row.title = "Adjuvant: On"
-            row.tag = "hasAdjuvant"
+            row.tag = "adjuvant"
             row.value = true
             }.onChange { (row) in
                 row.title = row.value! ? "Adjuvant: On" : "Adjuvant: Off"
@@ -40,7 +40,7 @@ extension PredictCoverageViewController {
         
         let tractorSpeedRow = IntRow() { row in
             row.title = "Tractor Speed"
-            row.tag = "tractorSpeed"
+            row.tag = "tractor_speed"
             let units = "\(MetricRanges.tractorSpeedMin.rawValue)-\(MetricRanges.tractorSpeedMax.rawValue) L/ha"
             row.placeholder = units
             row.add(rule: RuleRequired())
@@ -55,7 +55,7 @@ extension PredictCoverageViewController {
         
         let nozzleSizeRow = SegmentedRow<Int>() { row in
             row.title = "Nozzle Size"
-            row.tag = "nozzleSize"
+            row.tag = "nozzle_size"
             row.options = [1, 2, 3, 4]
             row.value = 1
         }
@@ -69,7 +69,7 @@ extension PredictCoverageViewController {
         
         let temperatureRow = IntRow() { row in
             row.title = "Temperature"
-            row.tag = "temperatue"
+            row.tag = "temperature"
             let units = "\(MetricRanges.temperatureMin.rawValue)-\(MetricRanges.temperatureMax.rawValue) L/ha"
             let message = "Temperature must be between \(units)"
             row.placeholder = units
@@ -98,7 +98,7 @@ extension PredictCoverageViewController {
         
         let relativeHumidityRow = IntRow() { row in
             row.title = "Relative Humidity"
-            row.tag = "relative humidity"
+            row.tag = "relative_humidity"
             let units = "\(MetricRanges.relativeHumidityMin)-\(MetricRanges.relativeHumidityMax.rawValue) L/ha"
             row.placeholder = units
             row.add(rule: RuleRequired())
@@ -124,7 +124,7 @@ extension PredictCoverageViewController {
         
         let windSpeedRow = IntRow() { row in
             row.title = "Wind Speed"
-            row.tag = "windSpeed"
+            row.tag = "wind_speed"
             let units = "\(MetricRanges.windSpeedMin.rawValue)-\(MetricRanges.windSpeedMax.rawValue) L/ha"
             row.placeholder = units
             row.add(rule: RuleRequired())
@@ -139,7 +139,7 @@ extension PredictCoverageViewController {
         
         let barometricPressureRow = IntRow() { row in
             row.title = "Barometric Pressure"
-            row.tag = "airPressure"
+            row.tag = "air_pressure"
             let units = "\(MetricRanges.airPressureMin.rawValue)-\(MetricRanges.airPressureMax.rawValue) L/ha"
             row.placeholder = units
             row.add(rule: RuleRequired())
@@ -167,7 +167,15 @@ extension PredictCoverageViewController {
             })
         }
         
-        predictCoverageButtonSection += [predictCoverageButtonRow]
+        let saveButtonRow = ButtonRow() { row in
+            row.title = "Save"
+            row.tag = "saveButton"
+            row.onCellSelection({ (cell, row) in
+                self.saveButtonTouch()
+            })
+        }
+        
+        predictCoverageButtonSection += [predictCoverageButtonRow, saveButtonRow]
         
         var predictionLabelSection = Section("Predictions")
         predictionLabelSection.hidden = true

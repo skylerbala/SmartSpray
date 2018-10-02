@@ -20,14 +20,14 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="navBarLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hEA-k8-JHe">
                                 <rect key="frame" x="62" y="208" width="250" height="250"/>
-                                <color key="tintColor" red="0.30588235294117649" green="0.52156862745098043" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.21568627450980393" green="0.52941176470588236" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="AB8-Xm-TbH"/>
                                     <constraint firstAttribute="width" constant="250" id="E9O-Ym-Nju"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90547925233840942" green="0.98420089483261108" blue="0.0072607644833624363" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.98431372549019602" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.18921616673469543" green="0.52649366855621338" blue="0.22568085789680481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hEA-k8-JHe" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5fm-DI-hrO"/>

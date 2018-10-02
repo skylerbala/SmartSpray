@@ -40,27 +40,7 @@ class PredictCoverageViewController: FormViewController {
 
     }
     
-    func predictButtonTouch() {
-        let errors = form.validate()
-        let predictionCoverageLabel = form.allRows.last as! LabelRow
-        let predictionCoverageLabelSection = form.allSections.last as! Section
-        
-        if errors == [] {
-            let valuesDict = form.values()
-            estimatedCoverageLabel.text = "Estimated Spray Coverage for 4 Nozzles: \nAIX: 12.12% \nTP: 3.55% \nTT: 15.1% \nXR: 1.52%"
-            predictionCoverageLabel.title = estimatedCoverageLabel.text
-            predictionCoverageLabel.hidden = false
-            predictionCoverageLabel.evaluateHidden()
-            
-            predictionCoverageLabelSection.hidden = false
-            predictionCoverageLabelSection.evaluateHidden()
-        }
-        else {
-            predictionCoverageLabel.hidden = true
-            predictionCoverageLabel.evaluateHidden()
-            
-            predictionCoverageLabelSection.hidden = true
-            predictionCoverageLabelSection.evaluateHidden()
-        }
-    }
+  
+    
+    
 }

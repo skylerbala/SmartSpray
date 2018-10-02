@@ -20,29 +20,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let tabBarVC = UITabBarController()
-
-        let predictVC = PredictCoverageViewController()
-        predictVC.title = "Predict"
-        predictVC.tabBarItem = UITabBarItem(title: "Predict", image: #imageLiteral(resourceName: "icons8-calculator-50"), selectedImage: #imageLiteral(resourceName: "icons8-calculator-50"))
-
+        let mainVC = MainViewController()
         
-        let captureVC = ScannerViewController()
-        captureVC.title = "Capture"
-        captureVC.tabBarItem = UITabBarItem(title: "Capture", image: #imageLiteral(resourceName: "icons8-screenshot-50"), selectedImage: #imageLiteral(resourceName: "icons8-screenshot-50"))
-
-        let predictionsListVC = PredictionsListViewController()
-        predictionsListVC.title = "Predictions"
-        predictionsListVC.tabBarItem = UITabBarItem(title: "Capture", image: #imageLiteral(resourceName: "icons8-menu-50"), selectedImage:#imageLiteral(resourceName: "icons8-menu-50"))
-
-        let vcs = [predictVC, captureVC, predictionsListVC]
-
-        tabBarVC.viewControllers = vcs.map({ (vc) -> UIViewController in
-            let navController = UINavigationController(rootViewController: vc)
-            return navController
-        })
+        window?.rootViewController = mainVC
+        
+        window?.makeKeyAndVisible()
+        
+//        let tabBarVC = UITabBarController()
+//
+//        let predictVC = PredictCoverageViewController()
+//        predictVC.title = "Predict"
+//        predictVC.tabBarItem = UITabBarItem(title: "Predict", image: #imageLiteral(resourceName: "icons8-calculator-50"), selectedImage: #imageLiteral(resourceName: "icons8-calculator-50"))
+//
 //        
+//        let captureVC = ScannerViewController()
+//        captureVC.title = "Capture"
+//        captureVC.tabBarItem = UITabBarItem(title: "Capture", image: #imageLiteral(resourceName: "icons8-screenshot-50"), selectedImage: #imageLiteral(resourceName: "icons8-screenshot-50"))
+//
+//        let predictionsListVC = PredictionsListViewController()
+//        predictionsListVC.title = "Predictions"
+//        predictionsListVC.tabBarItem = UITabBarItem(title: "Capture", image: #imageLiteral(resourceName: "icons8-menu-50"), selectedImage:#imageLiteral(resourceName: "icons8-menu-50"))
+//
+//        let vcs = [predictVC, captureVC, predictionsListVC]
+//
+//        tabBarVC.viewControllers = vcs.map({ (vc) -> UIViewController in
+//            let navController = UINavigationController(rootViewController: vc)
+//            return navController
+//        })
 //        
+//
 //        let cameraButton = UIButton()
 //        cameraButton.setImage(#imageLiteral(resourceName: "camera-button"), for: UIControlState.normal)
 //        cameraButton.sizeToFit()
@@ -51,8 +57,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        tabBarVC.tabBar.centerXAnchor.constraint(equalTo: cameraButton.centerXAnchor).isActive = true
 //        tabBarVC.tabBar.topAnchor.constraint(equalTo: cameraButton.centerYAnchor).isActive = true
 //        
-        window?.rootViewController = tabBarVC
-
+//        window?.rootViewController = tabBarVC
+        
+        
         
         // tab bar always going to have logo
         // on the left of ttab bar we have an account login
@@ -82,8 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //        window?.rootViewController = UINavigationController(rootViewController: mainContainerVC)
 
-        
-        window?.makeKeyAndVisible()
+
         
         return true
     }

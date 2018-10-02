@@ -25,6 +25,11 @@
 		9F5A06DE21452CD700ED418D /* QuantizedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06DD21452CD700ED418D /* QuantizedImage.swift */; };
 		9F5A06E021452CFF00ED418D /* RGBA32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06DF21452CFF00ED418D /* RGBA32.swift */; };
 		9F5A06E22145BEF800ED418D /* SaveFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06E12145BEF800ED418D /* SaveFormViewController.swift */; };
+		9F9346212162022500E1010B /* PredictCoverageActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9346202162022500E1010B /* PredictCoverageActions.swift */; };
+		9FB37105215DFF6D00E217EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB37104215DFF6D00E217EB /* LoginViewController.swift */; };
+		9FB37107215DFF7700E217EB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB37106215DFF7700E217EB /* LoginView.swift */; };
+		9FB37109215E03FA00E217EB /* LoginCoordinatorMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB37108215E03FA00E217EB /* LoginCoordinatorMod.swift */; };
+		9FB3710D215F32A000E217EB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB3710C215F32A000E217EB /* MainViewController.swift */; };
 		9FBF07782144EFDC004AC908 /* AnalyzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF07772144EFDC004AC908 /* AnalyzeViewController.swift */; };
 		9FBF07922144F5F3004AC908 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF07912144F5F3004AC908 /* CaptureView.swift */; };
 		9FBF0794214500C6004AC908 /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF0793214500C6004AC908 /* CropViewController.swift */; };
@@ -114,6 +119,11 @@
 		9F5A06DD21452CD700ED418D /* QuantizedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantizedImage.swift; sourceTree = "<group>"; };
 		9F5A06DF21452CFF00ED418D /* RGBA32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBA32.swift; sourceTree = "<group>"; };
 		9F5A06E12145BEF800ED418D /* SaveFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFormViewController.swift; sourceTree = "<group>"; };
+		9F9346202162022500E1010B /* PredictCoverageActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictCoverageActions.swift; sourceTree = "<group>"; };
+		9FB37104215DFF6D00E217EB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9FB37106215DFF7700E217EB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9FB37108215E03FA00E217EB /* LoginCoordinatorMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorMod.swift; sourceTree = "<group>"; };
+		9FB3710C215F32A000E217EB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9FBF07772144EFDC004AC908 /* AnalyzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeViewController.swift; sourceTree = "<group>"; };
 		9FBF07912144F5F3004AC908 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
 		9FBF0793214500C6004AC908 /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
@@ -277,6 +287,16 @@
 			path = Analyze;
 			sourceTree = "<group>";
 		};
+		9FB37103215DFF3A00E217EB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9FB37104215DFF6D00E217EB /* LoginViewController.swift */,
+				9FB37106215DFF7700E217EB /* LoginView.swift */,
+				9FB37108215E03FA00E217EB /* LoginCoordinatorMod.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		9FBF076D2144EE5D004AC908 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				9FBF07742144EEEB004AC908 /* Main */,
+				9FB37103215DFF3A00E217EB /* Login */,
 				9FBF07732144EE9C004AC908 /* Predict */,
 				9FD2955E214D9E580044765B /* CaptureSprayCard */,
 				9FEE08BA214A6CFA001EA6EA /* PredictionsList */,
@@ -323,6 +344,7 @@
 				9FD29560214E2C8B0044765B /* PredictCoverageForm.swift */,
 				9FEE08B6214A3886001EA6EA /* PredictCoverageView.swift */,
 				9FEE08B8214A4557001EA6EA /* PredictIntCell.swift */,
+				9F9346202162022500E1010B /* PredictCoverageActions.swift */,
 			);
 			path = Predict;
 			sourceTree = "<group>";
@@ -331,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				9F13D227213E5A7000F44527 /* AppDelegate.swift */,
+				9FB3710C215F32A000E217EB /* MainViewController.swift */,
 				9FD29553214C4E480044765B /* MainContainerViewController.swift */,
 			);
 			path = Main;
@@ -685,15 +708,27 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SmartSpray/Pods-SmartSpray-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/EZLoadingActivity/EZLoadingActivity.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/IGRPhotoTweaks/IGRPhotoTweaks.framework",
+				"${BUILT_PRODUCTS_DIR}/ILLoginKit/ILLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Validator/Validator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZLoadingActivity.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGRPhotoTweaks.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ILLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Validator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -724,6 +759,7 @@
 				9F5A06DE21452CD700ED418D /* QuantizedImage.swift in Sources */,
 				9FEE08B5214A27F3001EA6EA /* PredictCoverageViewController.swift in Sources */,
 				9FD295C7214F0F050044765B /* Error.swift in Sources */,
+				9F9346212162022500E1010B /* PredictCoverageActions.swift in Sources */,
 				9FD29561214E2C8B0044765B /* PredictCoverageForm.swift in Sources */,
 				9FD295C8214F0F050044765B /* Quadrilateral.swift in Sources */,
 				9F5A06E22145BEF800ED418D /* SaveFormViewController.swift in Sources */,
@@ -734,8 +770,10 @@
 				9FEE08BC214A6D26001EA6EA /* PredictionsListTableViewController.swift in Sources */,
 				9F5A06DC2145240500ED418D /* AnalyzeView.swift in Sources */,
 				9FEE0920214B3756001EA6EA /* MainColors.swift in Sources */,
+				9FB37107215DFF7700E217EB /* LoginView.swift in Sources */,
 				9FD295C9214F0F050044765B /* QuadrilateralView.swift in Sources */,
 				9FD29556214CB6E30044765B /* CropActions.swift in Sources */,
+				9FB37109215E03FA00E217EB /* LoginCoordinatorMod.swift in Sources */,
 				9FD295DD214F0F050044765B /* RectangleFeaturesFunnel.swift in Sources */,
 				9FD295D0214F0F050044765B /* CGAffineTransform+Utils.swift in Sources */,
 				9F13D2FD21409B1100F44527 /* ImageColorQuantization.swift in Sources */,
@@ -745,11 +783,13 @@
 				9FEE08B9214A4557001EA6EA /* PredictIntCell.swift in Sources */,
 				9FD295DA214F0F050044765B /* ReviewViewController.swift in Sources */,
 				9FD295CB214F0F050044765B /* EditScanViewController.swift in Sources */,
+				9FB37105215DFF6D00E217EB /* LoginViewController.swift in Sources */,
 				9F13D228213E5A7000F44527 /* AppDelegate.swift in Sources */,
 				9FBF0794214500C6004AC908 /* CropViewController.swift in Sources */,
 				9F13D2FB214069FF00F44527 /* DominantImageColors.swift in Sources */,
 				9FD295D2214F0F050044765B /* CGRect+Utils.swift in Sources */,
 				9FD2955A214D9DCC0044765B /* AnalyzeActions.swift in Sources */,
+				9FB3710D215F32A000E217EB /* MainViewController.swift in Sources */,
 				9FD29564214F003E0044765B /* ImageScannerViewController.swift in Sources */,
 				9FD295C6214F0F050044765B /* EditScanCornerView.swift in Sources */,
 				9FD295CC214F0F050044765B /* ZoomGestureController.swift in Sources */,
