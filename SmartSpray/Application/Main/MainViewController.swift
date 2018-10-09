@@ -24,7 +24,7 @@ class MainViewController: UITabBarController {
         super.viewDidAppear(animated)
         
         if firstLoad {
-            handleLogout()
+//            handleLogout()
             firstLoad = false
         }
     }

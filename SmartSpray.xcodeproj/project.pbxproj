@@ -20,6 +20,9 @@
 		9F13D24B213E5A7000F44527 /* SmartSprayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D24A213E5A7000F44527 /* SmartSprayUITests.swift */; };
 		9F13D2FB214069FF00F44527 /* DominantImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D2FA214069FF00F44527 /* DominantImageColors.swift */; };
 		9F13D2FD21409B1100F44527 /* ImageColorQuantization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13D2FC21409B1100F44527 /* ImageColorQuantization.swift */; };
+		9F2645C9216B52A500F462FD /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2645C8216B52A500F462FD /* Units.swift */; };
+		9F2645CB216B5F6D00F462FD /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2645CA216B5F6D00F462FD /* Unit.swift */; };
+		9F2645CD216C52FF00F462FD /* PredictionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2645CC216C52FF00F462FD /* PredictionModel.swift */; };
 		9F5A06D82145101600ED418D /* CropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06D72145101600ED418D /* CropView.swift */; };
 		9F5A06DC2145240500ED418D /* AnalyzeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06DB2145240500ED418D /* AnalyzeView.swift */; };
 		9F5A06DE21452CD700ED418D /* QuantizedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A06DD21452CD700ED418D /* QuantizedImage.swift */; };
@@ -114,6 +117,9 @@
 		9F13D24C213E5A7000F44527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F13D2FA214069FF00F44527 /* DominantImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominantImageColors.swift; sourceTree = "<group>"; };
 		9F13D2FC21409B1100F44527 /* ImageColorQuantization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageColorQuantization.swift; sourceTree = "<group>"; };
+		9F2645C8216B52A500F462FD /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
+		9F2645CA216B5F6D00F462FD /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		9F2645CC216C52FF00F462FD /* PredictionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionModel.swift; sourceTree = "<group>"; };
 		9F5A06D72145101600ED418D /* CropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropView.swift; sourceTree = "<group>"; };
 		9F5A06DB2145240500ED418D /* AnalyzeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeView.swift; sourceTree = "<group>"; };
 		9F5A06DD21452CD700ED418D /* QuantizedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantizedImage.swift; sourceTree = "<group>"; };
@@ -302,6 +308,8 @@
 			children = (
 				9F5A06DD21452CD700ED418D /* QuantizedImage.swift */,
 				9F5A06DF21452CFF00ED418D /* RGBA32.swift */,
+				9F2645C8216B52A500F462FD /* Units.swift */,
+				9F2645CC216C52FF00F462FD /* PredictionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -374,6 +382,7 @@
 			children = (
 				9F13D2FC21409B1100F44527 /* ImageColorQuantization.swift */,
 				9F13D2FA214069FF00F44527 /* DominantImageColors.swift */,
+				9F2645CA216B5F6D00F462FD /* Unit.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -767,6 +776,7 @@
 				9FEE08B7214A3886001EA6EA /* PredictCoverageView.swift in Sources */,
 				9FD295D1214F0F050044765B /* CGPoint+Utils.swift in Sources */,
 				9FBF07782144EFDC004AC908 /* AnalyzeViewController.swift in Sources */,
+				9F2645CD216C52FF00F462FD /* PredictionModel.swift in Sources */,
 				9FEE08BC214A6D26001EA6EA /* PredictionsListTableViewController.swift in Sources */,
 				9F5A06DC2145240500ED418D /* AnalyzeView.swift in Sources */,
 				9FEE0920214B3756001EA6EA /* MainColors.swift in Sources */,
@@ -775,6 +785,7 @@
 				9FD29556214CB6E30044765B /* CropActions.swift in Sources */,
 				9FB37109215E03FA00E217EB /* LoginCoordinatorMod.swift in Sources */,
 				9FD295DD214F0F050044765B /* RectangleFeaturesFunnel.swift in Sources */,
+				9F2645C9216B52A500F462FD /* Units.swift in Sources */,
 				9FD295D0214F0F050044765B /* CGAffineTransform+Utils.swift in Sources */,
 				9F13D2FD21409B1100F44527 /* ImageColorQuantization.swift in Sources */,
 				9F5A06D82145101600ED418D /* CropView.swift in Sources */,
@@ -786,6 +797,7 @@
 				9FB37105215DFF6D00E217EB /* LoginViewController.swift in Sources */,
 				9F13D228213E5A7000F44527 /* AppDelegate.swift in Sources */,
 				9FBF0794214500C6004AC908 /* CropViewController.swift in Sources */,
+				9F2645CB216B5F6D00F462FD /* Unit.swift in Sources */,
 				9F13D2FB214069FF00F44527 /* DominantImageColors.swift in Sources */,
 				9FD295D2214F0F050044765B /* CGRect+Utils.swift in Sources */,
 				9FD2955A214D9DCC0044765B /* AnalyzeActions.swift in Sources */,

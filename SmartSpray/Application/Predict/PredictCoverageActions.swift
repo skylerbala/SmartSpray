@@ -19,7 +19,32 @@ extension PredictCoverageViewController {
         
         if errors == [] {
             let valuesDict = form.values()
-            estimatedCoverageLabel.text = "Estimated Spray Coverage for 4 Nozzles: \nAIX: 12.12% \nTP: 3.55% \nTT: 15.1% \nXR: 1.52%"
+            
+            guard let pressure = valuesDict["pressure"] as! Double!,
+            let tractor_speed = valuesDict["tractor_speed"] as! Double!,
+            let gpa = valuesDict["gpa"] as! Double!,
+            let plant_spacing = valuesDict["plant_spacing"] as! Double!,
+            let temperature = valuesDict["temperature"] as! Double!,
+            let relative_humidity = valuesDict["relative_humidity"] as! Double!,
+            let wind_speed = valuesDict["wind_speed"] as! Double!,
+                let gust_speed = valuesDict["gust_speed"] as! Double!
+            else { return }
+            
+            let spray_coverage: Double = PredictCoverageModel.nozzle.t1.sprayCoverage(pressure: pressure, tractor_speed: tractor_speed, gpa: gpa, plant_spacing: plant_spacing, temperature: temperature, relative_humidity: relative_humidity, wind_speed: wind_speed, gust_speed: gust_speed)
+            
+            estimatedCoverageLabel.text =
+            """
+            Estimated Spray Coverage for 9 Nozzles:
+            \nTeeJet AI 9502E: \(spray_coverage)
+            \nAlbuz ATR 80 Green: \(value)
+            \nAlbuz ATR 80 Lilac: \(value)
+            \nAlbuz ATR 80 Orange: \(value)
+            \nTeeJet D2 w/ core 45: \(value)
+            \nTeeJet D3 w/ core 45: \(value)
+            \nTeeJet TJ60-8004: \(value)
+            \nTeeJet TP8002-VK: \(value)
+            \nTeeJet XR8003-VK: \(value)
+            """
             predictionCoverageLabel.title = estimatedCoverageLabel.text
             predictionCoverageLabel.hidden = false
             predictionCoverageLabel.evaluateHidden()

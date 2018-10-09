@@ -7,144 +7,196 @@
 //
 
 import Foundation
+import UIKit
 import Eureka
 
 extension PredictCoverageViewController {
     func createForm() {
+        /*
+            The variables will take Imperial Units
+            Form Vars
+         Variable : Imperial | Metric
+         
+         Variable           Unit                Min    Max    Input
+         Pressure           PSI     | kPA       30    180    60
+         Tractor speed      MPH     | kmph      1.2    5.6    4
+         GPA                Gallons | L         33    782    200
+         Plant spacing      Inches  | cm        12    20    12
+         Temp               F       | C         60    85    70
+         Relative hum       Percent     | ??    22    90    40
+         Wind speed         MPH     | kmph      0    14.5    5
+         Gust speed         MPH     | kmph      0    17.5    7
+        */
+        
+        let unit = UnitType.imperial
+        
         var spraySettings = Section("Spray Settings")
         
-        
-        let sprayVolumeRow = IntRow() { row in
-            row.title = "Spray Volume"
-            row.tag = "spray_volume"
-            let units = "\(MetricRanges.sprayVolumeMin.rawValue)-\(MetricRanges.sprayVolumeMax.rawValue) L/ha"
-            row.placeholder = units
+        let pressureRow = DecimalRow("pressure") { row in
+            let symbol = SmartSprayStandard.pressure(unitType: unit, valType: .min).unit.symbol
+            let title = "Pressure (\(symbol))"
+            let min = SmartSprayStandard.pressure(unitType: unit, valType: .min).value
+            let max = SmartSprayStandard.pressure(unitType: unit, valType: .max).value
+            let range = "\(min) - \(max) \(symbol)"
+            let msg = "Pressure must be between \(range)"
+            
+            row.title = title
+            row.placeholder = range
             row.add(rule: RuleRequired())
-            row.add(rule: RuleGreaterOrEqualThan(min: MetricRanges.sprayVolumeMin.rawValue, msg: "Spray volume must be between \(units)", id: UUID.init(uuidString: row.title!)?.uuidString))
-            row.add(rule: RuleSmallerOrEqualThan(max: MetricRanges.sprayVolumeMax.rawValue, msg: "Spray volume must be between \(units)", id: UUID.init(uuidString: row.title!)?.uuidString))
+            row.add(rule: RuleGreaterOrEqualThan(min: min, msg: msg, id: UUID.init(uuidString: title)?.uuidString))
+            row.add(rule: RuleSmallerOrEqualThan(max: max, msg: msg, id: UUID.init(uuidString: row.title!)?.uuidString))
             row.validationOptions = .validatesOnChangeAfterBlurred
             }.cellUpdate { (cell, row) in
                 if !row.isValid {
                     cell.titleLabel?.textColor = .red
+                    //cell.textLabel?.numberOfLines
                 }
         }
-        
-        let adjuvantRow = SwitchRow() { row in
-            row.title = "Adjuvant: On"
-            row.tag = "adjuvant"
-            row.value = true
-            }.onChange { (row) in
-                row.title = row.value! ? "Adjuvant: On" : "Adjuvant: Off"
-                row.updateCell()
-        }
-        
-        let tractorSpeedRow = IntRow() { row in
-            row.title = "Tractor Speed"
-            row.tag = "tractor_speed"
-            let units = "\(MetricRanges.tractorSpeedMin.rawValue)-\(MetricRanges.tractorSpeedMax.rawValue) L/ha"
-            row.placeholder = units
+    
+        let tractor_speedRow = DecimalRow("tractor_speed") { row in
+            let symbol = SmartSprayStandard.tractor_speed(unitType: unit, valType: .min).unit.symbol
+            let title = "Tractor Speed (\(symbol))"
+            let min = SmartSprayStandard.tractor_speed(unitType: unit, valType: .min).value
+            let max = SmartSprayStandard.tractor_speed(unitType: unit, valType: .max).value
+            let range = "\(min) - \(max) \(symbol)"
+            let msg = "Tractor Speed must be between \(range)"
+            
+            row.title = title
+            row.placeholder = range
             row.add(rule: RuleRequired())
-            row.add(rule: RuleGreaterOrEqualThan(min: MetricRanges.tractorSpeedMin.rawValue, msg: "Spray volume must be between \(units)", id: UUID.init(uuidString: row.title!)?.uuidString))
-            row.add(rule: RuleSmallerOrEqualThan(max: MetricRanges.tractorSpeedMax.rawValue, msg: "Spray volume must be between \(units)", id: UUID.init(uuidString: row.title!)?.uuidString))
+            row.add(rule: RuleGreaterOrEqualThan(min: min, msg: msg, id: UUID.init(uuidString: title)?.uuidString))
+            row.add(rule: RuleSmallerOrEqualThan(max: max, msg: msg, id: UUID.init(uuidString: row.title!)?.uuidString))
             row.validationOptions = .validatesOnChangeAfterBlurred
             }.cellUpdate { (cell, row) in
                 if !row.isValid {
                     cell.titleLabel?.textColor = .red
+                    //cell.textLabel?.numberOfLines
                 }
         }
         
-        let nozzleSizeRow = SegmentedRow<Int>() { row in
-            row.title = "Nozzle Size"
-            row.tag = "nozzle_size"
-            row.options = [1, 2, 3, 4]
-            row.value = 1
+        let gpaRow = DecimalRow("gpa") { row in
+            let symbol = SmartSprayStandard.gpa(unitType: unit, valType: .min).unit.symbol
+            let title = "Gallons per Acre (\(symbol))"
+            let min = SmartSprayStandard.gpa(unitType: unit, valType: .min).value
+            let max = SmartSprayStandard.gpa(unitType: unit, valType: .max).value
+            let range = "\(min) - \(max) \(symbol)"
+            let msg = "GPA must be between \(range)"
+            
+            row.title = title
+            row.placeholder = range
+            row.add(rule: RuleRequired())
+            row.add(rule: RuleGreaterOrEqualThan(min: min, msg: msg, id: UUID.init(uuidString: title)?.uuidString))
+            row.add(rule: RuleSmallerOrEqualThan(max: max, msg: msg, id: UUID.init(uuidString: row.title!)?.uuidString))
+            row.validationOptions = .validatesOnChangeAfterBlurred
+            }.cellUpdate { (cell, row) in
+                if !row.isValid {
+                    cell.titleLabel?.textColor = .red
+                    //cell.textLabel?.numberOfLines
+                }
         }
         
+        let plant_spacingRow = DecimalRow("plant_spacing") { row in
+            let symbol = SmartSprayStandard.gpa(unitType: unit, valType: .min).unit.symbol
+            let title = "Plant Spacing (\(symbol))"
+            let min = SmartSprayStandard.gpa(unitType: unit, valType: .min).value
+            let max = SmartSprayStandard.gpa(unitType: unit, valType: .max).value
+            let range = "\(min) - \(max) \(symbol)"
+            let msg = "Plant Spacing must be between \(range)"
+            
+            row.title = title
+            row.placeholder = range
+            row.add(rule: RuleRequired())
+            row.add(rule: RuleGreaterOrEqualThan(min: min, msg: msg, id: UUID.init(uuidString: title)?.uuidString))
+            row.add(rule: RuleSmallerOrEqualThan(max: max, msg: msg, id: UUID.init(uuidString: row.title!)?.uuidString))
+            row.validationOptions = .validatesOnChangeAfterBlurred
+            }.cellUpdate { (cell, row) in
+                if !row.isValid {
+                    cell.titleLabel?.textColor = .red
+                    //cell.textLabel?.numberOfLines
+                }
+        }
         
         spraySettings += [
-            sprayVolumeRow, adjuvantRow, tractorSpeedRow, nozzleSizeRow
+            pressureRow, tractor_speedRow, gpaRow, plant_spacingRow
         ]
         
         var weatherConditions = Section("Weather Conditions")
         
-        let temperatureRow = IntRow() { row in
-            row.title = "Temperature"
-            row.tag = "temperature"
-            let units = "\(MetricRanges.temperatureMin.rawValue)-\(MetricRanges.temperatureMax.rawValue) L/ha"
-            let message = "Temperature must be between \(units)"
-            row.placeholder = units
-            row.add(rule: RuleRequired(msg: "Required", id:  UUID.init(uuidString: row.title!)?.uuidString))
-            row.add(rule: RuleGreaterOrEqualThan(min: MetricRanges.temperatureMin.rawValue, msg: message, id: UUID.init(uuidString: row.title!)?.uuidString))
-            row.add(rule: RuleSmallerOrEqualThan(max: MetricRanges.temperatureMax.rawValue, msg: message, id: UUID.init(uuidString: row.title!)?.uuidString))
-            row.validationOptions = .validatesOnChangeAfterBlurred
-            }.cellSetup { (cell, row) in
-                cell.textLabel?.numberOfLines = 0
-            }.cellUpdate { (cell, row) in
-                if !row.isValid {
-                    cell.titleLabel?.textColor = .red
-                    let errors = row.validationErrors.map({ (error) -> String in
-                        return "\n\(error.msg)"
-                    })
-                    
-                    let error = errors.joined(separator: "")
-                    
-                    row.title = "Temperature" + error
-                }
-                else {
-                    row.title = "Temperature"
-                    cell.titleLabel?.textColor = .black
-                }
-        }
-        
-        let relativeHumidityRow = IntRow() { row in
-            row.title = "Relative Humidity"
-            row.tag = "relative_humidity"
-            let units = "\(MetricRanges.relativeHumidityMin)-\(MetricRanges.relativeHumidityMax.rawValue) L/ha"
-            row.placeholder = units
+        let temperatureRow = DecimalRow("temperature") { row in
+            let symbol = SmartSprayStandard.temperature(unitType: unit, valType: .min).unit.symbol
+            let title = "Temperature (\(symbol))"
+            let min = SmartSprayStandard.temperature(unitType: unit, valType: .min).value
+            let max = SmartSprayStandard.temperature(unitType: unit, valType: .max).value
+            let range = "\(min) - \(max) \(symbol)"
+            let msg = "Temperature must be between \(range)"
+            
+            row.title = title
+            row.placeholder = range
             row.add(rule: RuleRequired())
-            row.add(rule: RuleGreaterOrEqualThan(min: MetricRanges.relativeHumidityMin, msg: "Relative humidity must be between \(units)", id: UUID.init(uuidString: row.title!)?.uuidString))
-            row.add(rule: RuleSmallerOrEqualThan(max: MetricRanges.relativeHumidityMax.rawValue, msg: "Relative humidity must be between \(units)", id: UUID.init(uuidString: row.title!)?.uuidString))
+            row.add(rule: RuleGreaterOrEqualThan(min: min, msg: msg, id: UUID.init(uuidString: title)?.uuidString))
+            row.add(rule: RuleSmallerOrEqualThan(max: max, msg: msg, id: UUID.init(uuidString: row.title!)?.uuidString))
             row.validationOptions = .validatesOnChangeAfterBlurred
             }.cellUpdate { (cell, row) in
                 if !row.isValid {
                     cell.titleLabel?.textColor = .red
-                    let errors = row.validationErrors.map({ (error) -> String in
-                        return "\n\(error.msg)"
-                    })
-                    
-                    let error = errors.joined(separator: "")
-                    
-                    row.title = "Relative Humidity" + error
-                }
-                else {
-                    row.title = "Relative Humidity"
-                    cell.titleLabel?.textColor = .black
+                    //cell.textLabel?.numberOfLines
                 }
         }
-        
-        let windSpeedRow = IntRow() { row in
-            row.title = "Wind Speed"
-            row.tag = "wind_speed"
-            let units = "\(MetricRanges.windSpeedMin.rawValue)-\(MetricRanges.windSpeedMax.rawValue) L/ha"
-            row.placeholder = units
+//
+//        let relative_humidityRow = DecimalRow("relative_humidity") { row in
+//            let title = SmartSprayStandard.relative(unitType: unit, valType: .min).description
+//            let min = SmartSprayStandard.temperature(unitType: unit, valType: .min).value
+//            let max = SmartSprayStandard.temperature(unitType: unit, valType: .max).value
+//            let symbol = SmartSprayStandard.temperature(unitType: unit, valType: .min).unit.symbol
+//            let range = "\(min) - \(max) \(symbol)"
+//            let msg = "Relative Humidity must be between \(range)"
+//
+//            row.title = title
+//            row.placeholder = range
+//            row.add(rule: RuleRequired())
+//            row.add(rule: RuleGreaterOrEqualThan(min: min, msg: msg, id: UUID.init(uuidString: title)?.uuidString))
+//            row.add(rule: RuleSmallerOrEqualThan(max: max, msg: msg, id: UUID.init(uuidString: row.title!)?.uuidString))
+//            row.validationOptions = .validatesOnChangeAfterBlurred
+//            }.cellUpdate { (cell, row) in
+//                if !row.isValid {
+//                    cell.titleLabel?.textColor = .red
+//                    //cell.textLabel?.numberOfLines
+//                }
+//        }
+        let wind_speedRow = DecimalRow("wind_speed") { row in
+            let symbol = SmartSprayStandard.wind_speed(unitType: unit, valType: .min).unit.symbol
+            let title = "Wind Speed (\(symbol))"
+            let min = SmartSprayStandard.wind_speed(unitType: unit, valType: .min).value
+            let max = SmartSprayStandard.wind_speed(unitType: unit, valType: .max).value
+            let range = "\(min) - \(max) \(symbol)"
+            let msg = "Wind Speed must be between \(range)"
+            
+            row.title = title
+            row.placeholder = range
             row.add(rule: RuleRequired())
-            row.add(rule: RuleGreaterOrEqualThan(min: MetricRanges.windSpeedMin.rawValue, msg: "Spray volume must be between \(units)", id: UUID.init(uuidString: row.title!)?.uuidString))
-            row.add(rule: RuleSmallerOrEqualThan(max: MetricRanges.windSpeedMax.rawValue, msg: "Spray volume must be between \(units)", id: UUID.init(uuidString: row.title!)?.uuidString))
+            row.add(rule: RuleGreaterOrEqualThan(min: min, msg: msg, id: UUID.init(uuidString: title)?.uuidString))
+            row.add(rule: RuleSmallerOrEqualThan(max: max, msg: msg, id: UUID.init(uuidString: row.title!)?.uuidString))
             row.validationOptions = .validatesOnChangeAfterBlurred
             }.cellUpdate { (cell, row) in
                 if !row.isValid {
                     cell.titleLabel?.textColor = .red
+                    //cell.textLabel?.numberOfLines
                 }
         }
         
-        let barometricPressureRow = IntRow() { row in
-            row.title = "Barometric Pressure"
-            row.tag = "air_pressure"
-            let units = "\(MetricRanges.airPressureMin.rawValue)-\(MetricRanges.airPressureMax.rawValue) L/ha"
-            row.placeholder = units
+        let gust_speedRow = DecimalRow("gust_speed") { row in
+            let symbol = SmartSprayStandard.gust_speed(unitType: unit, valType: .min).unit.symbol
+            let title = "Gust Speed (\(symbol))"
+            let min = SmartSprayStandard.gust_speed(unitType: unit, valType: .min).value
+            let max = SmartSprayStandard.gust_speed(unitType: unit, valType: .max).value
+            let range = "\(min) - \(max) \(symbol)"
+            let msg = "Gust Speed must be between \(range)"
+            
+            row.title = title
+            row.placeholder = range
             row.add(rule: RuleRequired())
-            row.add(rule: RuleGreaterOrEqualThan(min: MetricRanges.airPressureMin.rawValue, msg: "Spray volume must be between \(units)", id: UUID.init(uuidString: row.title!)?.uuidString))
-            row.add(rule: RuleSmallerOrEqualThan(max: MetricRanges.airPressureMax.rawValue, msg: "Spray volume must be between \(units)", id: UUID.init(uuidString: row.title!)?.uuidString))
+            row.add(rule: RuleGreaterOrEqualThan(min: min, msg: msg, id: UUID.init(uuidString: title)?.uuidString))
+            row.add(rule: RuleSmallerOrEqualThan(max: max, msg: msg, id: UUID.init(uuidString: row.title!)?.uuidString))
             row.validationOptions = .validatesOnChangeAfterBlurred
             }.cellUpdate { (cell, row) in
                 if !row.isValid {
@@ -154,7 +206,7 @@ extension PredictCoverageViewController {
         }
         
         weatherConditions += [
-            temperatureRow, relativeHumidityRow, windSpeedRow, barometricPressureRow
+            temperatureRow, wind_speedRow, gust_speedRow
         ]
         
         var predictCoverageButtonSection = Section()
@@ -176,13 +228,24 @@ extension PredictCoverageViewController {
         }
         
         predictCoverageButtonSection += [predictCoverageButtonRow, saveButtonRow]
-        
+
         var predictionLabelSection = Section("Predictions")
         predictionLabelSection.hidden = true
         predictionLabelSection.evaluateHidden()
         
         let predictionLabelRow = LabelRow() { row in
-            row.title = "Estimated Spray Coverage for 4 Nozzles: \nAIX: 12.12% \nTP: 3.55% \nTT: 15.1% \nXR: 1.52%"
+            row.title = ""
+//            Estimated Spray Coverage for 9 Nozzles:
+//            \nTeeJet AI 9502E: \()
+//            \nAlbuz ATR 80 Green: \()
+//            \nAlbuz ATR 80 Lilac: \()
+//            \nAlbuz ATR 80 Orange: \()
+//            \nTeeJet D2 w/ core 45: \()
+//            \nTeeJet D3 w/ core 45: \()
+//            \nTeeJet TJ60-8004: \()
+//            \nTeeJet TP8002-VK: \()
+//            \nTeeJet XR8003-VK: \()
+//            """
             row.tag = "predictionLabel"
             row.cellSetup({ (cell, row) in
                 cell.textLabel?.numberOfLines = 0
@@ -191,7 +254,6 @@ extension PredictCoverageViewController {
         }
         
         predictionLabelSection += [predictionLabelRow]
-        
         
         let form = [spraySettings, weatherConditions, predictCoverageButtonSection, predictionLabelSection]
         
@@ -202,3 +264,4 @@ extension PredictCoverageViewController {
         rowKeyboardSpacing = 50
     }
 }
+
